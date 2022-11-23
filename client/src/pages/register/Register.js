@@ -54,7 +54,7 @@ function Register() {
     };
 
     return (
-        <div className="container">
+        <div className="form_container">
             <h1>Register for event </h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="row">

@@ -1,20 +1,10 @@
-*,
-*:before,
-*:after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-}
-
 body {
     height: 100vh;
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(41, 84, 98, 1) 0%, rgba(56, 40, 43, 1) 0%, rgba(60, 27, 27, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(22, 37, 57, 1) 100%, rgba(110, 120, 134, 1) 100%, rgba(0, 212, 255, 1) 100%);
 }
 
-.container {
+.form_container {
     background-color: #ffffff;
     width: 70%;
     min-width: min-content;
@@ -27,13 +17,13 @@ body {
     box-shadow: 20px 30px 25px rgba(0, 0, 0, 0.15);
 }
 
-h1 {
+.form_container h1 {
     font-size: 30px;
     text-align: center;
     color: #1c093c;
 }
 
-p {
+.form_container p {
     position: relative;
     margin: auto;
     width: 100%;
@@ -43,7 +33,7 @@ p {
     font-weight: 400;
 }
 
-form {
+.form_container form {
     width: 100%;
     position: relative;
     margin: 30px auto 0 auto;
@@ -57,13 +47,16 @@ form {
     margin-bottom: 20px;
 }
 
-label {
+.form_container label {
     color: #1c093c;
     font-size: 14px;
 }
 
-textarea,
-input {
+.form_container textarea,
+.form_container input {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
     width: 100%;
     font-weight: 400;
     padding: 8px 10px;
@@ -83,28 +76,18 @@ input {
     border-radius: 3px;
 }
 
-textarea {
+.form_container textarea {
     resize: none;
 }
 
-textarea:focus,
-input:focus {
+.form_container textarea:focus,
+.form_container input:focus {
     outline: none;
     border-color: #6f6df4;
 }
 
-button {
-    border: none;
-    padding: 10px 20px;
-    background: linear-gradient(130deg,
-            #6f6df4,
-            #4c46f5);
-    color: #ffffff;
-    border-radius: 3px;
-}
-
 @media only screen and (max-width: 768px) {
-    .container{
+    .form_container{
         max-width: min-content;
     }
     
