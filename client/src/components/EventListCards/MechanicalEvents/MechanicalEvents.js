@@ -1,6 +1,6 @@
 import React from 'react'
 import MechanicalCards from './MechanicalCards';
-import MechanicalEventData from '../../../data/departmentEvents/MechanicalEventData/MechanicalEventData.js'
+import MechanicalEventData from '../../../data/departmentEvents/MechanicalEventData.js'
 import Footer from '../../footer/Footer';
 import Navbar from '../../navbar/Navbar';
 

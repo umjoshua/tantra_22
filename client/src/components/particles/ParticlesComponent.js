@@ -21,7 +21,7 @@ function ParticlesComponent() {
                 enable: true,
                 zIndex: 1
             },
-            fpsLimit: 320,
+            fpsLimit: 60,
             interactivity: {
                 events: {
                     onClick: {
