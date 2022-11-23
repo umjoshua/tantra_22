@@ -1,4 +1,4 @@
-.mech_container{
+.mech_container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -8,14 +8,17 @@
     z-index: 1;
 }
 
-.mech_card{
+.mech_card {
     position: relative;
-    width: 280px;
+    width: max-content;
     max-height: max-content;
-    margin: 30px;
+    margin: auto;
+    padding: 30px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    background: url('../../../assets/poster.svg');
+    /* background: url('../../../assets/poster.svg'); */
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -24,12 +27,14 @@
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
 }
-.mech_card .mech_content{
+
+.mech_card .mech_content {
     padding: 20px;
     text-align: center;
     transition: 0.5s;
 }
-.mech_card .mech_content h2{
+
+.mech_card .mech_content h2 {
     position: absolute;
     top: -30px;
     right: 30px;
@@ -37,17 +42,21 @@
     color: rgba(255, 255, 255, 0.05);
     pointer-events: none;
 }
-.mech_card .mech_content h3{
+
+.mech_card .mech_content h3 {
     font-size: 1.8em;
     color: #fff;
     z-index: 1;
 }
-.mech_card .mech_content p{
+
+.mech_card .mech_content p {
     font-size: 1em;
     color: #fff;
     font-weight: 600;
 }
-.mech_card .mech_content a{
+
+.mech_card .mech_content a {
+    margin: 10px;
     position: relative;
     display: inline-block;
     padding: 8px 20px;
@@ -59,7 +68,17 @@
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-.mech_button{
+
+.mech_button {
     display: flex;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+    .mech_card {
+        position: relative;
+        width: min-content;
+        max-height: max-content;
+        margin: auto;
+    }
 }

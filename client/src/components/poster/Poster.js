@@ -6,14 +6,16 @@ import './Poster.css'
 
 function Poster() {
   return (
-    <div className='hero'> 
-      <ParticlesComponent className='part'/>
-        <div className='mask'>
-        <img src={PosterImage} alt="poster" className="intro_image"/> 
-        </div>
-        <div className="content">
-            <p>TANTRA"22</p>
-        </div>
+    <div className='hero'>
+      {/* <div className='absolute top-[90px]'><ParticlesComponent className='part' /></div> */}
+      <div className='particle_div'><ParticlesComponent className='part' /></div>
+      <div id="tsparticles">
+        <img src={PosterImage} alt="poster" className="intro_image" />
+      </div>
+      <div className="content">
+        <p>TANTRA"22</p>
+      </div>
+
     </div>
   )
 }

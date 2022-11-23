@@ -17,6 +17,7 @@ function Cards() {
               title={value.title}
               text={value.text}
               view={value.view}
+              explore={value.explore}
             />
           );
         })}

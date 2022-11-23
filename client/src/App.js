@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './pages/home/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Workshop from './components/workshops/Workshop';
+import MechanicalEvents from './components/EventListCards/MechanicalEvents/MechanicalEvents';
 
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
     <Router>
       <Routes>
         <Route exact path = '/' element={<Home/>}/>
-        <Route path = '/workshop' element={<Workshop/>}/>
+        <Route exact path = '/me-events' element={<MechanicalEvents/>}/>
+        <Route exact path = '/cse-events' element={<MechanicalEvents/>}/>
       </Routes>
     </Router>
   )

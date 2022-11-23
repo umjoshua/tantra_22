@@ -16,12 +16,13 @@ function ParticlesComponent() {
         id = 'tsparticles'
         init= {particlesInit}
         loaded={particlesLoaded}
+        height="100vh"
         options={{
             fullScreen: {
-                enable: true,
-                zIndex: 1
+                enable: false,
+                zIndex: 0
             },
-            fpsLimit: 320,
+            fpsLimit: 60,
             interactivity: {
                 events: {
                     onClick: {

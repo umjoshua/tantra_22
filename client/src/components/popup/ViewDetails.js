@@ -1,19 +1,15 @@
-import React, { useState }  from "react";
+import Popup from 'reactjs-popup';
 import './Popup.css'
-function PopUp(){
-    const [popup,setPop]=useState(false)
-    const handleClickOpen=()=>{
-        setPop(!popup)
-    }
-    const closePopup=()=>{
-        setPop(false)
-    }
-    return(
-        <div>
+
+const ViewDetails = () => {
+  return (
+    <Popup trigger={<button>View Details</button>} position="right center">
+      {
+        close => (<div>
           <div className="popup">
             <div className="popup_header">
               <h1 className="popup_title">Title</h1>
-              <h1 className="popupclose_btn">&times;</h1>
+              <h1 className="popupclose_btn" onClick={close}>&times;</h1>
             </div>
             <div className="details">
               <table cellPadding={'6px'}>
@@ -50,7 +46,10 @@ function PopUp(){
               </table>
             </div>
           </div>
-        </div>
-    )
+        </div>)
+      }
+    </Popup>
+  )
 }
-export default PopUp;
+
+export default ViewDetails
