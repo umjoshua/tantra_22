@@ -14,55 +14,55 @@ const CardsData = [
         imgsrc: Mechanical,
         title: "Mechanical",
         text: "Events conducted by Mechanical Department",
-        explore : '/workshop'
+        explore : '/me-events'
     },
     {
         imgsrc: Computer,
         title: "Computer Science",
         text: "Events conducted by CSE Department",
-        explore: 'domthing.com'
+        explore : '/cse-events'
     },
     {
         imgsrc: Civil,
         title: "Civil Engineering",
         text: "Events conducted by CE Department",
-        explore: 'domthing.com'
+        explore : '/ce-events'
     },
     {
         imgsrc: ECE,
         title: "Electrical and Communication Engineering",
         text: "Events conducted by ECE Department",
-        explore : 'domthing.com'
+        explore : '/ece-events'
     },
     {
         imgsrc: AEI,
         title: "Applied Electronics & Instrumentation",
         text: "Events conducted by AEI Department",
-        explore : 'domthing.com'
+        explore : '/aei-events'
     },
     {
         imgsrc: EEE,
         title: "Electrical and Electronics Engineering",
         text: "Events conducted by EEE Department",
-        explore : 'domthing.com'
+        explore : '/eee-events'
     },
     {
         imgsrc: ASH,
         title: "Applied Science and Humanities",
         text: "Events conducted by ASH Department",
-        explore : 'domthing.com'
+        explore : '/ash-events'
     },
     {
         imgsrc: ADS,
         title: "Artificial Intelligence and Data Science",
         text: "Events conducted by ADS Department",
-        explore: 'domthing.com'
+        explore : '/ads-events'
     },
     {
         imgsrc: Games,
         title: "Common Events",
         text: "Events for all...",
-        explore: 'domthing.com'
+        explore : '/common-events'
     },
 ]
 

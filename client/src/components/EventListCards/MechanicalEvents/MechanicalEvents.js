@@ -7,7 +7,7 @@ import Navbar from '../../navbar/Navbar';
 
 function MechanicalEvents() {
     return (
-        <div className="event_cards">
+        <div className="event_cards text-[white] font-[Quicksand] ">
           <Navbar/>
           <h1 className="event_heading">Events</h1>
           <div className="event_container">
