@@ -47,13 +47,12 @@
     display: flex;
     justify-content: flex-end;
     padding: 0.5rem 0;
-    
 }
 
 .event_btns .btn {
     background-color: #ff0066;
     padding: 0.5rem 1rem;
-    border-radius: 10px;
+    border-radius: 10px;    
 }
 
 @media screen and (max-width: 740px) {

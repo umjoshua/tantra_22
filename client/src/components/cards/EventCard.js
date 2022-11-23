@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Cards.css";
 
 function EventCard(props) {
+  let navigate = useNavigate();
+
   return (
     <div className="event_card">
       <img src={props.imgsrc} alt="workshop" />
@@ -11,7 +13,7 @@ function EventCard(props) {
       <div className="event_details">
         <p>{props.text}</p>
         <div className="event_btns">
-          <Link to={props.explore} className="btn">Explore</Link>
+          <button className="btn" onClick={() => navigate(props.explore)}>Explore</button>
         </div>
       </div>
     </div>

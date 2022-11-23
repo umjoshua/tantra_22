@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/Thanthra.png';
 import './Navbar.css';
 
 function Navbar() {
@@ -21,7 +21,6 @@ function Navbar() {
       <div className={`nav-items ${isOpen && "open"}`}>
         <a href="/">Home</a>
         <a href="/events">Events</a>
-        <a href="/">Register</a>
         <a href="#footer">Contact Us</a>
       </div>
       <div
