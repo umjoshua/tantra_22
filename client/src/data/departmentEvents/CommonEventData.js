@@ -1,8 +1,14 @@
 const CommonEventData = [
     {
-        name: '',
+        name: 'Photography',
         description: '',
-        event_type: '',
+        event_type: 'Competition',
+        fee: '',
+        student1: '',
+        s1_phone: '',
+        student2: '',
+        s2_phone: '',
+        staff: '',
     }
 ];
 

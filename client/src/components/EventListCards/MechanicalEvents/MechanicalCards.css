@@ -16,9 +16,7 @@
     padding: 30px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    /* background: url('../../../assets/poster.svg'); */
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90.41539335512812deg, rgba(243, 72, 104,1) 22.490166380814426%,rgba(242, 71, 104,1) 22.490166380814426%,rgba(158, 0, 236,1) 80.2010268332678%);
     overflow: hidden;
     display: flex;
     justify-content: center;
