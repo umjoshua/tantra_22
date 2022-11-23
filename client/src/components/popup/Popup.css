@@ -1,0 +1,84 @@
+.popup {
+    width: 50%;
+    max-height: max-content;
+    background-color: black;
+    border-radius: 25px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+    background: rgba(255, 255, 25, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0px 20px 5px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 20px 30px;
+    border-radius: 10px;
+    z-index: 1000;
+    transition: top 0ms ease-in-out 300ms,
+        opacity 300ms ease-in-out 0ms,
+        transform 300ms ease-in-out 0ms;
+}
+
+.popup_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup_title {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px 0px 20px;
+}
+
+.popupclose_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 25px;
+    
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.details {
+    padding-left: 20px;
+
+    font-size: 15px;
+}
+
+@media screen and (max-width: 640px) {
+    .popup {
+        width: fit-content;
+        max-height: max-content;
+        background-color: black;
+        border-radius: 25px;
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+        background: rgba(255, 255, 25, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: inset 0px 20px 5px rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding: 20px 30px;
+        border-radius: 10px;
+        z-index: 1000;
+        transition: top 0ms ease-in-out 300ms,
+            opacity 300ms ease-in-out 0ms,
+            transform 300ms ease-in-out 0ms;
+    }
+    .details{
+        font-size: 15px;
+    }
+}
