@@ -22,7 +22,7 @@ const corsOptions = {
     optionSuccessStatus: 200
 }
 app.use(cors());
-app.use('/events', eventRoutes);
+// app.use('/events', eventRoutes);
 app.use('/admin', adminRoutes);
 
 
