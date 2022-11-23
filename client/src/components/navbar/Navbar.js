@@ -6,12 +6,15 @@ import { Link } from "react-scroll";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [color, setColor] = useState(false);
+  const [home, setHome] = useState(false);
 
   const changeColor = () => {
     if (window.scrollY >= 100) {
+      setHome(true);
       setColor(true);
     } else {
       setColor(false);
+      setHome(false);
     }
   }
   window.addEventListener('scroll', changeColor);
@@ -20,13 +23,13 @@ function Navbar() {
     <div className={color ? "Navbar Navbar-bg" : "Navbar"}>
       <img src={Logo} className="nav-logo" alt='logo' />
       <div className={`nav-items ${isOpen && "open"}`}>
-        <Link smooth spy to="home" style={{cursor:'pointer'}}>
+        {home && <Link smooth spy to="home" style={{ cursor: 'pointer' }}>
           Home
-        </Link>
-        <Link smooth spy to="events" style={{cursor:'pointer'}}>
+        </Link>}
+        <Link smooth spy to="events" style={{ cursor: 'pointer' }}>
           Events
         </Link>
-        <Link smooth spy to="footer" style={{cursor:'pointer'}}>
+        <Link smooth spy to="footer" style={{ cursor: 'pointer' }}>
           Contact Us
         </Link>
       </div>

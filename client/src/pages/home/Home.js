@@ -1,12 +1,11 @@
-import { React, useRef } from 'react'
+import { React } from 'react'
 import Cards from '../../components/cards/Cards'
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
 import Poster from '../../components/poster/Poster'
+import PopUp from '../../components/popup/Popup';
 
 function Home() {
-  const myRef = useRef(null);
-  const executeScroll = () => myRef.current.scrollIntoView();
   return (
     <div className='bg-black text-[white] font-[Quicksand]'>
       <Navbar />
