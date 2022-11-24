@@ -10,6 +10,7 @@ import registerRoutes from './routes/register.js';
 
 const app = express();
 dotenv.config();
+app.use(cors());
 
 const PORT = process.env.PORT;
 const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.zevvmfz.mongodb.net/test`;
@@ -21,7 +22,6 @@ app.use('/register',registerRoutes)
 
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
-app.use(cors());
 
 
 mongoose.connect(CONNECTION_URL).then(() => {
