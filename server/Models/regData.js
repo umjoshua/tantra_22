@@ -31,6 +31,17 @@ const AdsRegSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tid: {
+        type: String,
+    },
+    stateName: {
+        type: String,
+        required: true,
+    },
+    district: {
+        type: String,
+        required: true,
+    }
 });
 
 const AshRegSchema = mongoose.Schema({
@@ -64,6 +75,17 @@ const AshRegSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tid: {
+        type: String,
+    },
+    stateName: {
+        type: String,
+        required: true,
+    },
+    district: {
+        type: String,
+        required: true,
+    }
 });
 
 
@@ -98,6 +120,17 @@ const aeiRegSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tid: {
+        type: String,
+    },
+    stateName: {
+        type: String,
+        required: true,
+    },
+    district: {
+        type: String,
+        required: true,
+    }
 });
 
 const ceRegSchema = mongoose.Schema({
@@ -131,6 +164,17 @@ const ceRegSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tid: {
+        type: String,
+    },
+    stateName: {
+        type: String,
+        required: true,
+    },
+    district: {
+        type: String,
+        required: true,
+    }
 });
 
 const commonRegSchema = mongoose.Schema({
@@ -164,6 +208,17 @@ const commonRegSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tid: {
+        type: String,
+    },
+    stateName: {
+        type: String,
+        required: true,
+    },
+    district: {
+        type: String,
+        required: true,
+    }
 });
 
 const cseRegSchema = mongoose.Schema({
@@ -197,6 +252,17 @@ const cseRegSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tid: {
+        type: String,
+    },
+    stateName: {
+        type: String,
+        required: true,
+    },
+    district: {
+        type: String,
+        required: true,
+    }
 });
 
 
@@ -231,6 +297,17 @@ const eceRegSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tid: {
+        type: String,
+    },
+    stateName: {
+        type: String,
+        required: true,
+    },
+    district: {
+        type: String,
+        required: true,
+    }
 });
 
 const eeeRegSchema = mongoose.Schema({
@@ -264,9 +341,18 @@ const eeeRegSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tid: {
+        type: String,
+    },
+    stateName: {
+        type: String,
+        required: true,
+    },
+    district: {
+        type: String,
+        required: true,
+    }
 });
-
-
 
 const meRegSchema = mongoose.Schema({
     event_id: {
