@@ -48,7 +48,7 @@ function Register() {
     });
 
     const RegisterData = (data) => {
-        Axios.post("http://localhost:5000",
+        Axios.post("http://localhost:5000/register",
             {
                 event_id: event_id,
                 event_name: name,
