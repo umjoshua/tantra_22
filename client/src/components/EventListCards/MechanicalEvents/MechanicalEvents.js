@@ -20,10 +20,8 @@ function MechanicalEvents() {
         {MechanicalEventData.map((value, index) => {
           return (
             <MechanicalCards
+              data = {value}
               key={index}
-              name={value.name}
-              description={value.description}
-              fee={value.fee}
             />
           );
         })}
