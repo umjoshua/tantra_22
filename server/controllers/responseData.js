@@ -1,11 +1,11 @@
-import RegData from '../Models/regData.js';
+// import RegData from '../Models/regData.js';
 
-export const getResponses = async (req, res) => {
-    try {
-        const regDetails = await RegData.find();
-        res.status(200).json(regDetails);
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
+// export const getResponses = async (req, res) => {
+//     try {
+//         const regDetails = await RegData.find();
+//         res.status(200).json(regDetails);
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }

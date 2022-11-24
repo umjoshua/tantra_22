@@ -5,10 +5,11 @@ import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Select } from './dropdown';
-import Navbar from '../../components/navbar/Navbar';
+
+import Axios from "axios";
 
 const states = [
-    "Andaman & Nicobar", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Dadra & Nagar Haveli", "Daman & Diu", "Delhi", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu & Kashmir", "Jharkhand", "Karnataka", "Kerala", "Lakshadweep", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Orissa", "Pondicherry", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Tripura", "Uttar Pradesh", "Uttaranchal", "West Bengal"
+    "Kerala", "Karnataka", "Tamil Nadu", "Andaman & Nicobar", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Dadra & Nagar Haveli", "Daman & Diu", "Delhi", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu & Kashmir", "Jharkhand", "Lakshadweep", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Orissa", "Pondicherry", "Punjab", "Rajasthan", "Sikkim", "Tripura", "Uttar Pradesh", "Uttaranchal", "West Bengal"
 ]
 
 const branches = [
@@ -18,6 +19,12 @@ const branches = [
 const sem = [
     'S1', 'S3', 'S5', 'S7'
 ]
+
+let config = {
+    headers: {
+        'Access-Control-Allow-Origin': '*',
+    }
+}
 
 
 function Register() {
@@ -40,6 +47,16 @@ function Register() {
         resolver: yupResolver(schema),
     });
 
+    const RegisterData = ({ data }) => {
+        Axios.post("http://localhost:5000/register", {
+            data
+        }, config).then((response) => {
+            console.log(response);
+        }).catch((error) => {
+            console.log(error);
+        });
+    }
+
     const onSubmit = (data) => {
         if (branch != null && semester != null && state != null) {
             data.semester = semester;
@@ -47,6 +64,7 @@ function Register() {
             data.branch = branch;
             console.log(data);
             setWarning(false);
+            RegisterData(data);
         }
         else {
             setWarning(true);
