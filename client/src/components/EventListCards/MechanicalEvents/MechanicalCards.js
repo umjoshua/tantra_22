@@ -13,7 +13,7 @@ function MechanicalCards(props) {
           <h3>{props.data.name}</h3>
           <h1>Reg Fee : {props.data.fee}</h1>
           <div className='mech_button'>
-            <a><ViewDetails /></a>
+            <a><ViewDetails data={eventData}/></a>
             <a><button className="btn" onClick={() => navigate('/register', { state: eventData })}>Register Event</button></a>
           </div>
         </div>
