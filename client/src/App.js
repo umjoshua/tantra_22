@@ -12,6 +12,7 @@ import EeeEvents from './components/EventListCards/EeeEvents/EeeEvents';
 import AshEvents from './components/EventListCards/AshEvents/AshEvents';
 import AdsEvents from './components/EventListCards/AdsEvents/AdsEvents';
 import CommEvents from './components/EventListCards/ComEvents/CommEvents';
+import PageNotFound from './components/pageNotFound/PageNotFound';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         <Route exact path='/com-events' element={<CommEvents />} />
         <Route exact path='/register' element={<Register />} />
         <Route exact path='/thanks' element={<ThanksPage />} />
-        <Route exact path='/page' element={<PageNotFound/>} />
+        <Route exact path='/*' element={<PageNotFound/>} />
       </Routes>
     </Router>
   )
