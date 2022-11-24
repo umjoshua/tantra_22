@@ -2,7 +2,6 @@ import React from 'react'
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SchoolIcon from '@mui/icons-material/School';
@@ -35,9 +34,9 @@ function Footer() {
                 <div className='right'>
                     <h4>Reach Us....</h4>
                     <div className='social'>
-                        <a href="https://www.instagram.com/tantra._22/" target='_blank'><InstagramIcon /></a>
-                        <a href="https://www.linkedin.com/in/tantra-techfest-1a2381258/" target='_blank'><LinkedInIcon /></a>
-                        <a href="https://vjec.ac.in/" target='_blank'><SchoolIcon /></a>
+                        <a href="https://www.instagram.com/tantra._22/" target='_blank' rel="noopener noreferrer"><InstagramIcon /></a>
+                        <a href="https://www.linkedin.com/in/tantra-techfest-1a2381258/"  target='_blank' rel="noopener noreferrer"><LinkedInIcon /></a>
+                        <a href="https://vjec.ac.in/" target='_blank' rel="noopener noreferrer"><SchoolIcon /></a>
                     </div>
                 </div>
                 <div className='right'>

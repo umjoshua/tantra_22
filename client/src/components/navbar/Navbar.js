@@ -23,37 +23,6 @@ function Navbar({ pg }) {
   }
   window.addEventListener('scroll', changeColor);
 
-  const homePageItems = () => {
-    return (
-      <>
-        {
-          home && <Link smooth spy to="home" style={{ cursor: 'pointer' }}>
-            Home
-          </Link>
-        }
-        <Link smooth spy to="events" style={{ cursor: 'pointer' }}>
-          Events
-        </Link>
-        <Link smooth spy to="footer" style={{ cursor: 'pointer' }}>
-          Contact Us
-        </Link>
-      </>
-    )
-  }
-
-  const navBarItems = () => {
-    return (
-      <>
-        <a onClick={() => { navigate('/') }}>
-          Home
-        </a>
-        <Link smooth spy to="footer" style={{ cursor: 'pointer' }}>
-          Contact Us
-        </Link>
-      </>
-    )
-  }
-
   return (
     <div className={color ? "Navbar Navbar-bg" : "Navbar"}>
       <img src={Logo} className="nav-logo" alt='logo' />
@@ -71,9 +40,9 @@ function Navbar({ pg }) {
             Contact Us
           </Link>
         </> : <>
-          <a onClick={() => { navigate('/') }}>
+          <Link onClick={() => { navigate('/',{state: { load: true }}) }}>
             Home
-          </a>
+          </Link>
           <Link smooth spy to="footer" style={{ cursor: 'pointer' }}>
             Contact Us
           </Link>

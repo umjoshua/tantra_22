@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import adminRoutes from './routes/admin.js';
+// import adminRoutes from './routes/admin.js';
 import registerRoutes from './routes/register.js';
 
 
@@ -12,11 +12,11 @@ const app = express();
 dotenv.config();
 app.use(cors());
 
-const PORT = process.env.PORT;
-const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.zevvmfz.mongodb.net/test`;
+const PORT = process.env.PORT || 5000;
+const CONNECTION_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.zevvmfz.mongodb.net/test?retryWrites=true&w=majority`;
 app.use(express.json())
 
-app.use('/admin',adminRoutes);
+// app.use('/admin',adminRoutes);
 app.use('/register',registerRoutes)
 
 

@@ -9,7 +9,7 @@ function ParticlesComponent() {
         await loadFull(main);
     };
     const particlesLoaded = (container) => {
-        console.log(container)
+        // console.log(container)
     }
   return (
     <Particles

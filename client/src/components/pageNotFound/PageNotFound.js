@@ -11,7 +11,7 @@ function PageNotFound() {
         <img src={PageNotFoundIcon} alt="404 Not Found"/>
         <h1>Page Not Found</h1>
         <p>Sorry can't find the page you are looking for! Click Here to go back to homepage</p>
-        <button onClick={()=>{navigate('/')}}>Home<ArrowBackIcon/></button>
+        <button onClick={()=>{navigate('/',{state: { load: true }})}}>Home<ArrowBackIcon/></button>
     </div>
   )
 }
