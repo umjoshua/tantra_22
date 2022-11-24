@@ -26,7 +26,7 @@ const sem = [
 function Register() {
     const navigate = useNavigate();
     const { state } = useLocation();
-    const { name, fee,dept } = state;
+    const { name, fee, dept, event_id } = state;
 
     const [branch, setBranch] = useState(null);
     const [semester, setSemester] = useState(null);
@@ -47,10 +47,13 @@ function Register() {
         resolver: yupResolver(schema),
     });
 
-    const RegisterData = (data ) => {
+    const RegisterData = (data) => {
         console.log("mii");
         Axios.post("http://localhost:5000/register",
             {
+                event_id: event_id,
+                event_name: name,
+                department:dept,
                 name: data.fname,
                 college: data.college,
                 branch: data.branch,
@@ -59,7 +62,7 @@ function Register() {
                 email: data.email,
                 stateName: data.stateName,
                 district: data.district,
-                tid: data.tid? data.tid : null,
+                tid: data.tid ? data.tid : null,
             }
         ).then((response) => {
             window.location = "/thanks";
