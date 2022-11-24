@@ -62,7 +62,7 @@ const CardsData = [
         imgsrc: Games,
         title: "Common Events",
         text: "Events for all...",
-        explore : '/common-events'
+        explore : '/com-events'
     },
 ]
 

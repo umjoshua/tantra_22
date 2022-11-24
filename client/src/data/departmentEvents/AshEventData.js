@@ -1,5 +1,6 @@
 const AshEventData = [
     {
+        event_id:15,
         name: 'Project Incubation',
         description:'Experiments related to physics ',
         event_type: 'Competition',
@@ -9,8 +10,12 @@ const AshEventData = [
         student2: '',
         s2_phone: '',
         staff: 'Mr.Jomy Jose',
+        prize: true,
+        dept:'ash',
+        reg: false,
     },
     {
+        event_id:16,
         name: 'Chaos Game',
         description: 'Mathematical Game',
         event_type: 'Games',
@@ -20,6 +25,9 @@ const AshEventData = [
         student2: '',
         s2_phone: '',
         staff: 'Ms.Divya Thomas ',
+        prize: true,
+        dept:'ash',
+        reg: false,
     }
 ];
 

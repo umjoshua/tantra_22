@@ -17,7 +17,7 @@ const AccountsData = {
         ifsc: 'SIBL0000078',
         bankName: 'Bank South Indian bank, Thalassery',
     },
-    ec: {
+    ece: {
         name: 'HOD Electronics & Communication ',
         accountNo: '0078053000079583',
         ifsc: 'SIBL0000078',
