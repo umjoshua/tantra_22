@@ -1,13 +1,13 @@
 import { React, useEffect } from 'react'
 import { useLocation } from "react-router-dom";
-import MechanicalCards from './MechanicalCards';
-import MechanicalEventData from '../../../data/departmentEvents/MechanicalEventData.js'
+import Cards from '../Cards';
+import AdsEventData from '../../../data/departmentEvents/AdsEventData';
 import Footer from '../../footer/Footer';
 import Navbar from '../../navbar/Navbar';
 
 
 
-function MechanicalEvents() {
+function AdsEvents() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -17,10 +17,10 @@ function MechanicalEvents() {
       <Navbar pg='ot' />
       <h1 className="event_heading">Events</h1>
       <div className="event_container">
-        {MechanicalEventData.map((value, index) => {
+        {AdsEventData.map((value, index) => {
           return (
-            <MechanicalCards
-              data = {value}
+            <Cards
+              data={value}
               key={index}
             />
           );
@@ -31,4 +31,4 @@ function MechanicalEvents() {
   );
 }
 
-export default MechanicalEvents
+export default AdsEvents

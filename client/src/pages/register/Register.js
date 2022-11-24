@@ -26,7 +26,7 @@ const sem = [
 function Register() {
     const navigate = useNavigate();
     const { state } = useLocation();
-    const { name, fee } = state;
+    const { name, fee,dept } = state;
 
     const [branch, setBranch] = useState(null);
     const [semester, setSemester] = useState(null);
@@ -141,10 +141,10 @@ function Register() {
                         <div>
                             FEE: Rs. {fee}
                             <div className='text-red-900'>Transfer the amount to the account mentioned below: *</div>
-                            <div>Name: {AccountsData.cse.name}</div>
-                            <div>A/c No: {AccountsData.cse.accountNo}</div>
-                            <div>IFSC: {AccountsData.cse.ifsc}</div>
-                            <div>BANK: {AccountsData.cse.bankName}</div>
+                            <div>Name: {AccountsData[dept].name}</div>
+                            <div>A/c No: {AccountsData[dept].accountNo}</div>
+                            <div>IFSC: {AccountsData[dept].ifsc}</div>
+                            <div>BANK: {AccountsData[dept].bankName}</div>
                             <div className="column">
                                 <label>Transaction ID: *</label>
                                 <input type="text" placeholder="Transaction ID "
