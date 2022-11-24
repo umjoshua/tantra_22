@@ -12,26 +12,26 @@ import Games from '../../assets/departments/games.jpg';
 const CardsData = [
     {
         imgsrc: Mechanical,
-        title: "Mechanical",
-        text: "Events conducted by Mechanical Department",
+        title: "Mechanical Engineering",
+        text: "Events conducted by Department of Mechanical Engineering",
         explore : '/me-events'
     },
     {
         imgsrc: Computer,
         title: "Computer Science",
-        text: "Events conducted by CSE Department",
+        text: "Events conducted by Department of Computer Science and Engineering ",
         explore : '/cse-events'
     },
     {
         imgsrc: Civil,
         title: "Civil Engineering",
-        text: "Events conducted by CE Department",
+        text: "Events conducted by Department of Civil Engineering",
         explore : '/ce-events'
     },
     {
         imgsrc: ECE,
-        title: "Electrical and Communication Engineering",
-        text: "Events conducted by ECE Department",
+        title: "Electronics and Communication Engineering",
+        text: "Events conducted by Department of Electronics and Communication Engineering",
         explore : '/ece-events'
     },
     {
@@ -55,13 +55,13 @@ const CardsData = [
     {
         imgsrc: ADS,
         title: "Artificial Intelligence and Data Science",
-        text: "Events conducted by ADS Department",
+        text: "Events conducted by Department of Artificial Intelligence and Data Science",
         explore : '/ads-events'
     },
     {
         imgsrc: Games,
         title: "Common Events",
-        text: "Events for all...",
+        text: "Events common for all...",
         explore : '/com-events'
     },
 ]

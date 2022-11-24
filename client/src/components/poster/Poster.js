@@ -9,11 +9,13 @@ function Poster() {
     <div className='hero'>
       {/* <div className='absolute top-[90px]'><ParticlesComponent className='part' /></div> */}
       <div className='particle_div'><ParticlesComponent className='part' /></div>
-      <div id="tsparticles">
-        <img src={PosterImage} alt="poster" className="intro_image" />
+      <div id="tsparticles"></div>
+      <div className='fill'>
+      <img src={PosterImage} alt="poster" className="intro_image" />
       </div>
       <div className="content">
-        <p>TANTRA"22</p>
+        <p className='tantra'>TANTRA"22</p>
+        <p className='eventdate'>DECEMBER 05,2022</p>
       </div>
 
     </div>

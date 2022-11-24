@@ -19,6 +19,11 @@ const ViewDetails = ({data}) => {
                   <td>{data.description}</td>
                 </tr>
                 <tr>
+                  <td>Prize</td>
+                  <td>:</td>
+                  <td>{data.prize ? 'Yes' : 'No'}</td>
+                </tr>
+                <tr>
                   <td>Student Coordinators</td>
                   <td>:</td>
                   <td>{data.student1}, {data.student2 }</td>

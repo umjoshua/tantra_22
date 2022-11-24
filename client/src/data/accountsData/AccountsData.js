@@ -41,7 +41,7 @@ const AccountsData = {
         ifsc: 'SIBL0000078',
         bankName: 'Bank South Indian bank, Thalassery',
     },
-    ai: {
+    ads: {
         name: 'HOD Artificial Intelligence',
         accountNo: '0078053000079585',
         ifsc: 'SIBL0000078',
