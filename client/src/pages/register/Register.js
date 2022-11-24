@@ -24,6 +24,7 @@ const sem = [
 
 
 function Register() {
+    const url = "http://localhost:5000/register"
     const navigate = useNavigate();
     const { state } = useLocation();
     const { name, fee, dept, event_id } = state;
@@ -48,7 +49,7 @@ function Register() {
     });
 
     const RegisterData = (data) => {
-        Axios.post("http://localhost:5000/register",
+        Axios.post(url,
             {
                 event_id: event_id,
                 event_name: name,
@@ -64,7 +65,7 @@ function Register() {
                 tid: data.tid ? data.tid : null,
             }
         ).then((response) => {
-            window.location = "/thanks";
+            navigate('/thanks');
         }).catch((error) => {
             console.log(error);
         });

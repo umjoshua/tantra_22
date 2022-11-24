@@ -86,20 +86,11 @@ body {
     border-color: #6f6df4;
 }
 
-@media only screen and (max-width: 768px) {
-    .form_container{
-        max-width: min-content;
-        transform: translate(-50%, -20%);
-        position: absolute;
-        left: 50%;
-        top: 50%;
-    }
-}
 @media only screen and (max-width: 1050px) {
     .form_container{
         max-width: min-content;
-        transform: translate(-50%, -30%);
-        position: absolute;
+        transform: translate(-50%, -1%);
+        position: relative;
         left: 50%;
         top: 50%;
     }
