@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Select } from './dropdown';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import AccountsData from '../../data/accountsData/AccountsData';
 
 import Axios from "axios";
@@ -48,8 +48,7 @@ function Register() {
     });
 
     const RegisterData = (data) => {
-        console.log("mii");
-        Axios.post("http://localhost:5000/register",
+        Axios.post("http://localhost:5000",
             {
                 event_id: event_id,
                 event_name: name,
