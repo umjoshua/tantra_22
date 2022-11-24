@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Select } from './dropdown';
-import { useLocation } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import AccountsData from '../../data/accountsData/AccountsData';
 
 import Axios from "axios";
@@ -24,6 +24,7 @@ const sem = [
 
 
 function Register() {
+    const navigate = useNavigate();
     const { state } = useLocation();
     const { name, fee } = state;
 
@@ -34,7 +35,7 @@ function Register() {
 
     const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
     const schema = yup.object().shape({
-        name: yup.string().required(),
+        fname: yup.string().required(),
         college: yup.string().required(),
         email: yup.string().email().required(),
         district: yup.string().required(),
@@ -46,11 +47,22 @@ function Register() {
         resolver: yupResolver(schema),
     });
 
-    const RegisterData = ({ data }) => {
-        Axios.post("http://localhost:5000/register", {
-            data
-        }).then((response) => {
-            console.log(response);
+    const RegisterData = (data ) => {
+        console.log("mii");
+        Axios.post("http://localhost:5000/register",
+            {
+                name: data.fname,
+                college: data.college,
+                branch: data.branch,
+                semester: data.semester,
+                phno: data.phno,
+                email: data.email,
+                stateName: data.stateName,
+                district: data.district,
+                tid: data.tid? data.tid : null,
+            }
+        ).then((response) => {
+            window.location = "/thanks";
         }).catch((error) => {
             console.log(error);
         });
@@ -78,7 +90,7 @@ function Register() {
                     <div className="column">
                         <label>Name *</label>
                         <input type="text" placeholder="Name"
-                            {...register('name')}
+                            {...register('fname')}
                         />
                     </div>
                     <div className="column">
@@ -145,6 +157,7 @@ function Register() {
                 {warning ? <div className='p-1 text-red-600'>*Please fill all the fields.</div> : null}
                 <input type='submit' className='submit'></input>
             </form>
+            <button className='submit' onClick={() => { navigate(-1) }}>Cancel</button>
         </div>
     )
 }
