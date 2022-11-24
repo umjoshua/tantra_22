@@ -10,6 +10,7 @@ import { useLoadScript } from '@react-google-maps/api';
 
 import './Footer.css'
 import Map from '../maps/Maps';
+import { Link } from 'react-router-dom';
 
 function Footer() {
 const {isLoaded} = useLoadScript({googleMapsApiKey: process.env.GOOGLE_MAP_API_KEY})
@@ -25,10 +26,10 @@ const {isLoaded} = useLoadScript({googleMapsApiKey: process.env.GOOGLE_MAP_API_K
                     </div>
                 </div>
                 <div className='location'>
-                    <PhoneIcon/> <p>9876543210</p>
+                    <PhoneIcon/> <p>9074597252</p>
                 </div>
                 <div className='location'>
-                    <EmailIcon/> <p>someone@gmail.com</p>
+                    <EmailIcon/> <p><a href='mailto:tantra.22tech@gmail.com'>tantra.22tech@gmail.com </a></p>
                 </div>
 
             </div>
@@ -38,10 +39,9 @@ const {isLoaded} = useLoadScript({googleMapsApiKey: process.env.GOOGLE_MAP_API_K
                 <h4>Reach Us....</h4>
                 <div className='map'>{isLoaded && <Map/>}</div>
                 
-                <div className='social'>
-                    <FacebookIcon/>
-                    <InstagramIcon/>
-                    <LinkedInIcon/>
+                <div className='social'> 
+                   <a href="https://www.instagram.com/tantra._22/" target='_blank'><InstagramIcon/></a>
+                  <a href="https://www.linkedin.com/in/tantra-techfest-1a2381258/" target='_blank'><LinkedInIcon/></a> 
                 </div>
             </div>
         </div>

@@ -1,0 +1,45 @@
+.page_not_found img{
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.page_not_found{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.page_not_found h1{
+    color: #3b3a39;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    margin: 50px 0px 0px 0px;
+}
+.page_not_found p a{
+    color: #637eff;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.page_not_found button{
+    width: 140px;
+    height: 40px;
+    margin: 10px;
+    background-color: #2f2e41;
+    color: #ffffff;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+}
+.page_not_found button:hover{
+    background-color: #637eff;
+    transition: all ease 0.2s;
+}
