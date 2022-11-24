@@ -5,6 +5,8 @@ import * as yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Select } from './dropdown';
+import { useLocation } from 'react-router-dom';
+import AccountsData from '../../data/accountsData/AccountsData';
 
 import Axios from "axios";
 
@@ -20,18 +22,14 @@ const sem = [
     'S1', 'S3', 'S5', 'S7'
 ]
 
-let config = {
-    headers: {
-        'Access-Control-Allow-Origin': '*',
-    }
-}
-
 
 function Register() {
+    const { state } = useLocation();
+    const { name, fee } = state;
 
     const [branch, setBranch] = useState(null);
     const [semester, setSemester] = useState(null);
-    const [state, setState] = useState(null);
+    const [stateName, setstateName] = useState(null);
     const [warning, setWarning] = useState(false);
 
     const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
@@ -41,6 +39,7 @@ function Register() {
         email: yup.string().email().required(),
         district: yup.string().required(),
         phno: yup.string().matches(phoneRegExp).required(),
+        tid: yup.string(),
     });
 
     const { register, handleSubmit } = useForm({
@@ -50,7 +49,7 @@ function Register() {
     const RegisterData = ({ data }) => {
         Axios.post("http://localhost:5000/register", {
             data
-        }, config).then((response) => {
+        }).then((response) => {
             console.log(response);
         }).catch((error) => {
             console.log(error);
@@ -58,9 +57,9 @@ function Register() {
     }
 
     const onSubmit = (data) => {
-        if (branch != null && semester != null && state != null) {
+        if (branch != null && semester != null && stateName != null) {
             data.semester = semester;
-            data.state = state;
+            data.stateName = stateName;
             data.branch = branch;
             console.log(data);
             setWarning(false);
@@ -73,17 +72,17 @@ function Register() {
 
     return (
         <div className="form_container">
-            <h1>Register for event </h1>
+            <h1>Register for {name} </h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="row">
                     <div className="column">
-                        <label>Name</label>
+                        <label>Name *</label>
                         <input type="text" placeholder="Name"
                             {...register('name')}
                         />
                     </div>
                     <div className="column">
-                        <label>Email</label>
+                        <label>Email *</label>
                         <input type="email" placeholder="email"
                             {...register('email')}
                         />
@@ -91,23 +90,23 @@ function Register() {
                 </div>
                 <div className="row">
                     <div className="column">
-                        <label >College</label>
+                        <label >College *</label>
                         <input type="text" placeholder="College"
                             {...register('college')}
                         />
                     </div>
                     <div className="column">
-                        <label>Branch</label>
+                        <label>Branch *</label>
                         <Select options={branches} st={branch} setSt={setBranch} />
                     </div>
                 </div>
                 <div className="row">
                     <div className="column">
-                        <label>Semester</label>
+                        <label>Semester *</label>
                         <Select options={sem} st={semester} setSt={setSemester} />
                     </div>
                     <div className="column">
-                        <label>Phone Number</label>
+                        <label>Phone Number *</label>
                         <input type="tel" placeholder='+91'
                             {...register('phno')}
                         />
@@ -115,15 +114,33 @@ function Register() {
                 </div>
                 <div className="row">
                     <div className="column">
-                        <label>State</label>
-                        <Select options={states} st={state} setSt={setState} />
+                        <label>State *</label>
+                        <Select options={states} st={stateName} setSt={setstateName} />
                     </div>
                     <div className="column">
-                        <label>Distrcit</label>
+                        <label>Distrcit *</label>
                         <input type="text" placeholder="District"
                             {...register('district')}
                         />
                     </div>
+                </div>
+                <div className='column'>
+                    {fee !== 'FREE' ?
+                        <div>
+                            FEE: Rs. {fee}
+                            <div className='text-red-900'>Transfer the amount to the account mentioned below: *</div>
+                            <div>Name: {AccountsData.cse.name}</div>
+                            <div>A/c No: {AccountsData.cse.accountNo}</div>
+                            <div>IFSC: {AccountsData.cse.ifsc}</div>
+                            <div>BANK: {AccountsData.cse.bankName}</div>
+                            <div className="column">
+                                <label>Transaction ID: *</label>
+                                <input type="text" placeholder="Transaction ID "
+                                    {...register('tid')} required
+                                />
+                            </div>
+                        </div> : null}
+
                 </div>
                 {warning ? <div className='p-1 text-red-600'>*Please fill all the fields.</div> : null}
                 <input type='submit' className='submit'></input>
