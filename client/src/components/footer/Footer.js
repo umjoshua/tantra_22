@@ -17,15 +17,17 @@ function Footer() {
                     <div className='location'>
                         <LocationCityIcon />
                         <div>
-                            <p>Jyothi Nagar, Chemperi (P.O)</p>
-                            <p>Kannur 670632, Kerala, India</p>
+                            <a href="https://maps.app.goo.gl/kuiSu981HsBggDBN8?g_st=ic" target='_blank' rel="noopener noreferrer">
+                                <p>Jyothi Nagar, Chemperi (P.O)</p>
+                                <p>Kannur 670632, Kerala, India</p>
+                            </a>
                         </div>
                     </div>
                     <div className='location'>
-                        <PhoneIcon /> <p>9074597252</p>
+                        <PhoneIcon /> <p><a href="tel://+919074597252" > +91 9074597252</a></p>
                     </div>
                     <div className='location'>
-                        <EmailIcon /> <p><a href='mailto:tantra.22tech@gmail.com'>tantra.22tech@gmail.com </a></p>
+                        <EmailIcon /> <p><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=tantra.22tech@gmail.com' target='_blank' rel="noopener noreferrer">tantra.22tech@gmail.com</a></p>
                     </div>
 
                 </div>
@@ -35,7 +37,7 @@ function Footer() {
                     <h4>Reach Us....</h4>
                     <div className='social'>
                         <a href="https://www.instagram.com/tantra._22/" target='_blank' rel="noopener noreferrer"><InstagramIcon /></a>
-                        <a href="https://www.linkedin.com/in/tantra-techfest-1a2381258/"  target='_blank' rel="noopener noreferrer"><LinkedInIcon /></a>
+                        <a href="https://www.linkedin.com/in/tantra-techfest-1a2381258/" target='_blank' rel="noopener noreferrer"><LinkedInIcon /></a>
                         <a href="https://vjec.ac.in/" target='_blank' rel="noopener noreferrer"><SchoolIcon /></a>
                     </div>
                 </div>

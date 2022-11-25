@@ -28,6 +28,8 @@ function Register() {
     const navigate = useNavigate();
     const { state } = useLocation();
     const { name, fee, dept, event_id } = state;
+    const [disable, setDisable] = useState(false);
+    const [netwarning, setNetWarning] = useState(false);
 
     const [branch, setBranch] = useState(null);
     const [semester, setSemester] = useState(null);
@@ -65,8 +67,10 @@ function Register() {
                 tid: data.tid ? data.tid : null,
             }
         ).then((response) => {
+            setNetWarning(false);
             navigate('/thanks');
         }).catch((error) => {
+            setNetWarning(true);
             console.log(error);
         });
     }
@@ -78,6 +82,8 @@ function Register() {
             data.branch = branch;
             console.log(data);
             setWarning(false);
+            setNetWarning(false);
+            setDisable(true);
             RegisterData(data);
         }
         else {
@@ -86,81 +92,84 @@ function Register() {
     };
 
     return (
-        <div className="form_container">
-            <h1>Register for {name} </h1>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="row">
-                    <div className="column">
-                        <label>Name *</label>
-                        <input type="text" placeholder="Name"
-                            {...register('fname')}
-                        />
+        <div className='form_full_main'>
+            <div className="form_container">
+                <h1>Register for {name} </h1>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="row">
+                        <div className="column">
+                            <label>Name *</label>
+                            <input type="text" placeholder="Name"
+                                {...register('fname')}
+                            />
+                        </div>
+                        <div className="column">
+                            <label>Email *</label>
+                            <input type="email" placeholder="email"
+                                {...register('email')}
+                            />
+                        </div>
                     </div>
-                    <div className="column">
-                        <label>Email *</label>
-                        <input type="email" placeholder="email"
-                            {...register('email')}
-                        />
+                    <div className="row">
+                        <div className="column">
+                            <label >College *</label>
+                            <input type="text" placeholder="College"
+                                {...register('college')}
+                            />
+                        </div>
+                        <div className="column">
+                            <label>Branch *</label>
+                            <Select options={branches} st={branch} setSt={setBranch} />
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="column">
-                        <label >College *</label>
-                        <input type="text" placeholder="College"
-                            {...register('college')}
-                        />
+                    <div className="row">
+                        <div className="column">
+                            <label>Semester *</label>
+                            <Select options={sem} st={semester} setSt={setSemester} />
+                        </div>
+                        <div className="column">
+                            <label>Phone Number *</label>
+                            <input type="tel" placeholder='Contact Number'
+                                {...register('phno')}
+                            />
+                        </div>
                     </div>
-                    <div className="column">
-                        <label>Branch *</label>
-                        <Select options={branches} st={branch} setSt={setBranch} />
+                    <div className="row">
+                        <div className="column">
+                            <label>State *</label>
+                            <Select options={states} st={stateName} setSt={setstateName} />
+                        </div>
+                        <div className="column">
+                            <label>Distrcit *</label>
+                            <input type="text" placeholder="District"
+                                {...register('district')}
+                            />
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="column">
-                        <label>Semester *</label>
-                        <Select options={sem} st={semester} setSt={setSemester} />
-                    </div>
-                    <div className="column">
-                        <label>Phone Number *</label>
-                        <input type="tel" placeholder='+91'
-                            {...register('phno')}
-                        />
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="column">
-                        <label>State *</label>
-                        <Select options={states} st={stateName} setSt={setstateName} />
-                    </div>
-                    <div className="column">
-                        <label>Distrcit *</label>
-                        <input type="text" placeholder="District"
-                            {...register('district')}
-                        />
-                    </div>
-                </div>
-                <div className='column'>
-                    {fee !== 'FREE' ?
-                        <div>
-                            FEE: Rs. {fee}
-                            <div className='text-red-900'>Transfer the amount to the account mentioned below: *</div>
-                            <div>Name: {AccountsData[dept].name}</div>
-                            <div>A/c No: {AccountsData[dept].accountNo}</div>
-                            <div>IFSC: {AccountsData[dept].ifsc}</div>
-                            <div>BANK: {AccountsData[dept].bankName}</div>
-                            <div className="column">
-                                <label>Transaction ID: *</label>
-                                <input type="text" placeholder="Transaction ID "
-                                    {...register('tid')} required
-                                />
-                            </div>
-                        </div> : null}
+                    <div className='column'>
+                        {fee !== 'FREE' ?
+                            <div>
+                                FEE: Rs. {fee}
+                                <div className='text-red-900'>Transfer the amount to the account mentioned below: *</div>
+                                <div>Name: {AccountsData[dept].name}</div>
+                                <div>A/c No: {AccountsData[dept].accountNo}</div>
+                                <div>IFSC: {AccountsData[dept].ifsc}</div>
+                                <div>BANK: {AccountsData[dept].bankName}</div>
+                                <div className="column">
+                                    <label>Transaction ID: *</label>
+                                    <input type="text" placeholder="Transaction ID "
+                                        {...register('tid')} required
+                                    />
+                                </div>
+                            </div> : null}
 
-                </div>
-                {warning ? <div className='p-1 text-red-600'>*Please fill all the fields.</div> : null}
-                <input type='submit' className='submit'></input>
-            </form>
-            <button className='submit' onClick={() => { navigate(-1) }}>Cancel</button>
+                    </div>
+                    {warning ? <div className='p-1 text-red-600'>*Please fill all the fields.</div> : null}
+                    {netwarning ? <div className='p-1 text-red-600 font-bold'>*Please check your network connection</div>:null}
+                    <input type='submit' disabled={disable && !netwarning ? true : false} className='submit'></input>
+                </form>
+                <button className='submit' onClick={() => { navigate(-1) }}>Cancel</button>
+            </div>
         </div>
     )
 }

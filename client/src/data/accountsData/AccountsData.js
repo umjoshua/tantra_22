@@ -46,6 +46,12 @@ const AccountsData = {
         accountNo: '0078053000079585',
         ifsc: 'SIBL0000078',
         bankName: 'Bank South Indian bank, Thalassery',
+    },
+    comm:{
+        name: '',
+        accountNo: '',
+        ifsc: '',
+        bankName: '',
     }
 };
 

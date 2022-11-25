@@ -20,7 +20,7 @@ const ViewDetails = ({ data }) => {
               <div>Student Coordinators :</div>
               <p>{data.student1} , {data.student2}</p>
               <div>Contact</div>
-              <p>{data.s1_phone} , {data.s2_phone}</p>
+              <p ><a className='text-blue-500' href={`tel://${data.s1_phone}`}>{data.s1_phone}</a> , <a className='text-blue-500' href={`tel://${data.s2_phone}`}>{data.s2_phone}</a></p>
               <div>Staff Coordinators :</div>
               <p>{data.staff}</p>
             </div>
