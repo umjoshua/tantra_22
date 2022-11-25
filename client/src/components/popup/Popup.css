@@ -56,11 +56,10 @@
 
 @media screen and (max-width: 640px) {
     .popup {
-        width: fit-content;
-        max-height: max-content;
+        width:70%;
+        max-height: 80%;
         background-color: black;
         border-radius: 25px;
-
         position: fixed;
         top: 50%;
         left: 50%;
@@ -71,7 +70,7 @@
         box-shadow: inset 0px 20px 5px rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        padding: 20px 30px;
+        /* padding: 20px 30px; */
         border-radius: 10px;
         z-index: 1000;
         transition: top 0ms ease-in-out 300ms,

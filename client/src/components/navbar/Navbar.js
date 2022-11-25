@@ -16,6 +16,7 @@ function Navbar({ pg }) {
     if (window.scrollY >= 100) {
       setHome(true);
       setColor(true);
+      setIsOpen(false);
     } else {
       setColor(false);
       setHome(false);

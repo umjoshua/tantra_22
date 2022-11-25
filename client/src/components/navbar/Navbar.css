@@ -1,4 +1,3 @@
-
 .Navbar {
   height: 90px;
   display: flex;
@@ -47,6 +46,7 @@
 }
 
 .Navbar > .nav-items > a:hover::before {
+  background-color: black;
   height: 2px;
   width: 70%;
   background-color: #ff0066;
