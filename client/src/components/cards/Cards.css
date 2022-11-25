@@ -4,6 +4,9 @@
     text-align: center;
     padding: 4rem 0 2rem 0;
 }
+.event_cards{
+    width: 100%;
+}
 
 .event_container {
     max-width: 1140px;
