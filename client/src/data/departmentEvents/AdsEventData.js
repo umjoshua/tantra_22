@@ -12,7 +12,7 @@ const AdsEventData = [
         staff: 'Ms Jijina MT',
         prize: true,
         dept:'ads',
-        reg: false,
+        reg: true,
     },
     {
         event_id:2,
@@ -27,7 +27,7 @@ const AdsEventData = [
         staff: 'Ms Anu Treesa George',
         prize: true,
         dept:'ads',
-        reg: false,
+        reg: true,
 
     },
     {

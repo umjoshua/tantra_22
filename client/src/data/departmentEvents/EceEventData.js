@@ -162,7 +162,7 @@ const EceEventData = [
         staff: 'Ms.Anusha Chacko',
         prize: true,
         dept:'ece',
-        reg: false,
+        reg: true,
     },
     {
         event_id:51,
@@ -192,7 +192,7 @@ const EceEventData = [
         staff: 'Ms.Anusha Chacko',
         prize: true,
         dept:'ece',
-        reg: false,
+        reg: true,
     },
     {
         event_id:53,

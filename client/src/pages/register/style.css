@@ -4,78 +4,11 @@ body {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(41, 84, 98, 1) 0%, rgba(56, 40, 43, 1) 0%, rgba(60, 27, 27, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(22, 37, 57, 1) 100%, rgba(110, 120, 134, 1) 100%, rgba(0, 212, 255, 1) 100%);
 }
 
-.form_full_main{
-    height: 100%;
-    width: 100%;
-    padding: 50px;
-}
-.form_container {
-    background-color: #ffffff;
-    width: 70%;
-    min-width: min-content;
-    margin: auto;
-    padding: 35px 50px;
-    /* transform: translate(-50%,-30%); */
-    /* position: absolute;
-    left: 50%;
-    top: 50%; */
-    border-radius: 10px;
-    box-shadow: 20px 30px 25px rgba(0, 0, 0, 0.15);
-}
-
-.form_container h1 {
-    font-size: 30px;
-    text-align: center;
-    color: #1c093c;
-}
-
-.form_container p {
-    position: relative;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    color: #606060;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.form_container form {
-    width: 100%;
-    position: relative;
-    margin: 30px auto 0 auto;
-}
-
-.row {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px 30px;
-    margin-bottom: 20px;
-}
-
-.form_container label {
-    color: #1c093c;
-    font-size: 14px;
-}
-
-.form_container textarea,
-.form_container input , .form_container button{
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    width: 100%;
-    font-weight: 400;
-    padding: 8px 10px;
-    border-radius: 5px;
-    border: 1.2px solid #c4cae0;
-    margin-top: 10px;
-    height: 50px;
-}
-.form_container input[type=submit]:disabled {
+input[type=submit]:disabled {
     background: #4a4a4a;
 }
 
-.form_container input[type=submit] {
+input[type=submit] {
     border: none;
     padding: 10px 20px;
     background: linear-gradient(130deg,
@@ -83,22 +16,15 @@ body {
             #4c46f5);
     color: #ffffff;
     border-radius: 3px;
+    cursor: pointer;
 }
 
-.form_container textarea {
-    resize: none;
-}
-
-.form_container textarea:focus,
-.form_container input:focus {
-    outline: none;
-    border-color: #6f6df4;
-}
-
-@media only screen and (max-width: 1400px) {
-    .form_full_main{
-        height: 100%;
-        width: 100%;
-        padding: 10px;
-    }
+.submit {
+    border: none;
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid black;
+    color: black;
+    border-radius: 3px;
+    cursor: pointer;
 }

@@ -12,7 +12,7 @@ const AeiEventData = [
         staff: 'Mr. Shinu MM',
         prize: true,
         dept:'aei',
-        reg: false,
+        reg: true,
     },
     {
         event_id:6,
@@ -65,7 +65,7 @@ const AeiEventData = [
         name: 'Treasure hunt',
         description: 'To boost both your logic and technique, the idea of hunting for hidden treasures with different level',
         event_type:'Games' ,
-        fee:200,
+        fee:100,
         student1: 'Mr. Joyel Joseph',
         s1_phone: 8547763190,
         student2: 'Mr. Adwaith Pradeep',

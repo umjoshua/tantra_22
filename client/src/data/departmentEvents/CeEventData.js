@@ -12,7 +12,7 @@ const CeEventData = [
         staff: 'Hridya P, Rojin P',
         prize: true,
         dept:'ce',
-        reg: false,
+        reg: true,
     },
     {
         event_id:18,
@@ -27,7 +27,7 @@ const CeEventData = [
         staff: 'Saneesh K, Anuragi P',
         prize: false,
         dept:'ce',
-        reg: false,
+        reg: true,
     },
     {
         event_id:19,
@@ -42,7 +42,7 @@ const CeEventData = [
         staff: 'Laxmi Ramdas, Anitha Babu',
         prize: true,
         dept:'ce',
-        reg: false,
+        reg: true,
     },
     {
         event_id:19,
@@ -57,7 +57,7 @@ const CeEventData = [
         staff: 'Riya Pradeep, Dr. Vibhoosha',
         prize: true,
         dept:'ce',
-        reg: false,
+        reg: true,
     },
     {
         event_id:20,
@@ -117,7 +117,7 @@ const CeEventData = [
         staff: 'Athira Rajendran',
         prize: true,
         dept:'ce',
-        reg: false,
+        reg: true,
     },
     {
         event_id:24,
@@ -132,7 +132,7 @@ const CeEventData = [
         staff: 'Deepu V S, Peter Job',
         prize: true,
         dept:'ce',
-        reg: false,
+        reg: true,
     },
     {
         event_id:25,
@@ -147,7 +147,7 @@ const CeEventData = [
         staff: 'Rinnet Francis, Sinai Michael',
         prize: true,
         dept:'ce',
-        reg: false,
+        reg: true,
     },
     {
         event_id:26,
@@ -162,7 +162,7 @@ const CeEventData = [
         staff: 'Abhijath I P, Dain Philipose',
         prize: true,
         dept:'ce',
-        reg: false,
+        reg: true,
     },
     {
         event_id:27,
@@ -177,7 +177,7 @@ const CeEventData = [
         staff: 'Reshmitha,',
         prize: true,
         dept:'ce',
-        reg: false,
+        reg: true,
     }
 
 ];

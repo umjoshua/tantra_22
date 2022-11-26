@@ -10,9 +10,9 @@ const CommonEventData = [
         student2: 'Sidharthan AK',
         s2_phone: '6282073642',
         staff: '',
-        prize: false,
+        prize: true,
         dept:'comm',
-        reg: false,
+        reg: true,
     }
 ];
 

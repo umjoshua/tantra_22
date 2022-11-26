@@ -27,7 +27,7 @@ const EeeEventData = [
         staff: 'Athira M thomas',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 76,
@@ -42,7 +42,7 @@ const EeeEventData = [
         staff: 'Ankita sebastian',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 77,
@@ -57,7 +57,7 @@ const EeeEventData = [
         staff: 'Shelma George',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 78,
@@ -72,7 +72,7 @@ const EeeEventData = [
         staff: 'Indhulekha',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 79,
@@ -87,7 +87,7 @@ const EeeEventData = [
         staff: 'Tintu George',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 80,
@@ -132,7 +132,7 @@ const EeeEventData = [
         staff: 'Jijo joseph',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 83,
@@ -147,7 +147,7 @@ const EeeEventData = [
         staff: 'Jijo joseph',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 84,
@@ -162,7 +162,7 @@ const EeeEventData = [
         staff: 'Jijo joseph',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 85,
@@ -177,7 +177,7 @@ const EeeEventData = [
         staff: 'Jijo joseph',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 86,
@@ -192,7 +192,7 @@ const EeeEventData = [
         staff: 'Shelma George',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 87,
@@ -222,7 +222,7 @@ const EeeEventData = [
         staff: 'Athira M thomas',
         prize: true,
         dept: 'eee',
-        reg : false,
+        reg : true,
     },
     {
         event_id: 89,

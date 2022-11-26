@@ -18,7 +18,7 @@ const CardsData = [
     },
     {
         imgsrc: Computer,
-        title: "Computer Science",
+        title: "Computer Science and Engineering",
         text: "Events conducted by Department of Computer Science and Engineering ",
         explore : '/cse-events'
     },

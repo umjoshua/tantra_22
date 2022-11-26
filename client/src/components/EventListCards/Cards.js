@@ -12,9 +12,20 @@ function Cards(props) {
         <div className="mech_content">
           <h3>{props.data.name}</h3>
           <h1>Reg Fee : {props.data.fee}</h1>
-          <div className='mech_button'>
+          <div className='mech_button m-auto'>
             <a><ViewDetails data={eventData} /></a>
-            <a><button className="btn" onClick={() => navigate('/register', { state: eventData })}>Register Event</button></a>
+            {
+              eventData.reg ?
+                <a>
+                  <button
+                    className="btn"
+                    onClick={() =>
+                      navigate('/register', { state: eventData })}>
+                    Register Event
+                  </button>
+                </a>
+                : null
+            }
           </div>
         </div>
       </div>

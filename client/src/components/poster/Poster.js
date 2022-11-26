@@ -15,7 +15,7 @@ function Poster() {
       </div>
       <div className="content">
         <p className='tantra'>TANTRA"22</p>
-        <p className='eventdate'>DECEMBER 05,2022</p>
+        <p className='eventdate'>DECEMBER 05, 2022</p>
       </div>
 
     </div>

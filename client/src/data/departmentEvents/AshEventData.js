@@ -12,7 +12,7 @@ const AshEventData = [
         staff: 'Mr.Jomy Jose',
         prize: true,
         dept:'ash',
-        reg: false,
+        reg: true,
     },
     {
         event_id:16,
@@ -27,7 +27,7 @@ const AshEventData = [
         staff: 'Ms.Divya Thomas ',
         prize: true,
         dept:'ash',
-        reg: false,
+        reg: true,
     }
 ];
 
