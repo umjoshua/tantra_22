@@ -45,7 +45,7 @@ function Footer() {
                     <h4>About Us....</h4>
 
                     <div className='social'>
-                        <p>Tantra '22 was founded by a group of tech-driven students who felt the urge to provide a venue for showcasing their technical innovation and  to gain extensive knowledge. Our mission is to blend technology, innovation, and enjoyment so as to create an experience that is unparalleled. </p>
+                        <p>Tantra 22 is the annual intercollege technical fest with the objective of providing a platform for tech-oriented students to showcase their technical innovation and gain extensive knowledge. Our mission is to blend technology, creativity, and innovation to produce an experience that is unparalleled.</p>
                     </div>
                 </div>
             </div>

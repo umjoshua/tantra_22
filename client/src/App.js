@@ -1,9 +1,9 @@
 import React from 'react';
 import Home from './pages/home/Home';
 import { BrowserRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
-import Register from './pages/register/Register';
 import ThanksPage from './pages/register/thanks';
 import PageNotFound from './components/pageNotFound/PageNotFound';
+import RegisterB from './pages/register/RegisterB';
 import {
   AdsEvents,
   AeiEvents,
@@ -31,7 +31,7 @@ function App() {
           <Route exact path='/ash-events' element={<AshEvents />} />
           <Route exact path='/ads-events' element={<AdsEvents />} />
           <Route exact path='/com-events' element={<CommEvents />} />
-          <Route exact path='/register' element={<Register />} />
+          <Route exact path='/register' element={<RegisterB />} />
           <Route exact path='/thanks' element={<ThanksPage />} />
           <Route exact path='/*' element={<PageNotFound />} />
         </Routes>

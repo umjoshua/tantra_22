@@ -12,16 +12,16 @@ const ViewDetails = ({ data }) => {
               <h1 className="popupclose_btn" onClick={close}>&times;</h1>
             </div>
             <div className="details">
-              <div>Description :</div>
+              <div className='font-bold'>Description :</div>
               <p>{data.description}</p>
-              <div>Prize :</div>
+              <div className='font-bold'>Prize :</div>
               <p>{data.prize ? 'Yes' : 'No'}</p>
 
-              <div>Student Coordinators :</div>
+              <div className='font-bold'>Student Coordinators :</div>
               <p>{data.student1} , {data.student2}</p>
-              <div>Contact</div>
+              <div className='font-bold'>Contact</div>
               <p ><a className='text-blue-500' href={`tel://${data.s1_phone}`}>{data.s1_phone}</a> , <a className='text-blue-500' href={`tel://${data.s2_phone}`}>{data.s2_phone}</a></p>
-              <div>Staff Coordinators :</div>
+              <div className='font-bold'>Staff Coordinators :</div>
               <p>{data.staff}</p>
             </div>
           </div>

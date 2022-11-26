@@ -103,7 +103,7 @@ const MecahnicalEventData = [
         staff: 'Ryne PM, Jayachandran',
         prize: true,
         dept:'me',
-        reg: false,
+        reg: true,
     },
     {
         event_id:63,

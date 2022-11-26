@@ -10,7 +10,7 @@
 
 .mech_card {
     position: relative;
-    width: max-content;
+    min-width: max-content;
     max-height: max-content;
     margin: auto;
     padding: 30px;
@@ -68,14 +68,18 @@
 }
 
 .mech_button {
+    width: fit-content;
+    margin: auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 @media only screen and (max-width: 768px) {
     .mech_card {
         position: relative;
-        width: min-content;
+        min-width: min-content;
+        /* min-width: max-content; */
         max-height: max-content;
         margin: auto;
     }
