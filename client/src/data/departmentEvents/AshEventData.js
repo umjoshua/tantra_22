@@ -13,6 +13,7 @@ const AshEventData = [
         prize: true,
         dept:'ash',
         reg: true,
+        group: false,
     },
     {
         event_id:16,
@@ -28,6 +29,7 @@ const AshEventData = [
         prize: true,
         dept:'ash',
         reg: true,
+        group: false,
     }
 ];
 

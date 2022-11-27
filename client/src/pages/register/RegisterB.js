@@ -23,7 +23,7 @@ const sem = [
 ]
 
 function RegisterB() {
-    const url = "http://localhost:5000/register"
+    const url = "https://tantra.herokuapp.com/register"
     const navigate = useNavigate();
     const { state } = useLocation();
     const { name, fee, dept, event_id } = state;
@@ -100,6 +100,7 @@ function RegisterB() {
                                 <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 ">
                                     <div className="text-gray-600">
                                         <div className="font-bold text-2xl flex justify-center">Register for {name}</div>
+                                        <p className='text-red-700 p-2'>NOTE: For group events, please fill the details of group leader.</p>
                                     </div>
                                     <div className="lg:col-span-2">
                                         <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">

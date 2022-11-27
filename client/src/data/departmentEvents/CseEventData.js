@@ -13,6 +13,7 @@ const CseEventData = [
         prize: true,
         dept:'cse',
         reg: true,
+        group: true,
     },
     {
         event_id:30,
@@ -28,6 +29,7 @@ const CseEventData = [
         prize: true,
         dept:'cse',
         reg: true,
+        group: true,
     },
     {
         event_id:31,
@@ -43,6 +45,7 @@ const CseEventData = [
         prize: true,
         dept:'cse',
         reg: true,
+        group: false,
     },
     {
         event_id:32,
@@ -58,6 +61,7 @@ const CseEventData = [
         prize: true,
         dept:'cse',
         reg: true,
+        group: true,
     },
     {
         event_id:33,
@@ -73,6 +77,7 @@ const CseEventData = [
         prize: false,
         dept:'cse',
         reg: false,
+        group: true,
     },
     {
         event_id:34,
@@ -88,6 +93,7 @@ const CseEventData = [
         prize: true,
         dept:'cse',
         reg: true,
+        group: true,
     },
     {
         event_id:35,
@@ -103,6 +109,7 @@ const CseEventData = [
         prize: true,
         dept:'cse',
         reg: true,
+        group: false,
     },
     {
         event_id:36,
@@ -118,6 +125,7 @@ const CseEventData = [
         prize: false,
         dept:'cse',
         reg: true,
+        group: false,
     },
     {
         event_id:37,
@@ -133,6 +141,7 @@ const CseEventData = [
         prize: true,
         dept:'cse',
         reg: true,
+        group: false,
     },
     {
         event_id:38,
@@ -148,6 +157,7 @@ const CseEventData = [
         prize: true,
         dept:'cse',
         reg: true,
+        group: true,
     },
     {
         event_id:39,
@@ -163,6 +173,7 @@ const CseEventData = [
         prize: false,
         dept:'cse',
         reg: false,
+        group: true,
     },
 ];
 

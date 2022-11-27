@@ -13,6 +13,7 @@ const MecahnicalEventData = [
         prize: false,
         dept:'me',
         reg: true,
+        group: false,
 
     },
     {
@@ -29,6 +30,7 @@ const MecahnicalEventData = [
         prize: true,
         dept:'me',
         reg: true,
+        group: false,
     },
     {
         event_id:58,
@@ -44,6 +46,7 @@ const MecahnicalEventData = [
         prize: false,
         dept:'me',
         reg: false,
+        group: true,
     },
     {
         event_id:59,
@@ -59,6 +62,7 @@ const MecahnicalEventData = [
         prize: true,
         dept:'me',
         reg: true,
+        group: false,
     },
     {
         event_id:60,
@@ -74,6 +78,7 @@ const MecahnicalEventData = [
         prize: true,
         dept:'me',
         reg: true,
+        group: false,
     },
     {
         event_id:61,
@@ -89,6 +94,7 @@ const MecahnicalEventData = [
         prize: true,
         dept:'me',
         reg: true,
+        group: false,
     },
     {
         event_id:62,
@@ -104,6 +110,7 @@ const MecahnicalEventData = [
         prize: true,
         dept:'me',
         reg: true,
+        group: true,
     },
     {
         event_id:63,
@@ -119,6 +126,7 @@ const MecahnicalEventData = [
         prize: false,
         dept:'me',
         reg: false,
+        group: true,
     },
     {
         event_id:64,
@@ -134,6 +142,7 @@ const MecahnicalEventData = [
         prize: true,
         dept:'me',
         reg: true,
+        group: false,
     },
     {
         event_id:65,
@@ -149,6 +158,7 @@ const MecahnicalEventData = [
         prize: true,
         dept:'me',
         reg: true,
+        group: false,
     },
     {
         event_id:66,
@@ -164,6 +174,7 @@ const MecahnicalEventData = [
         prize: true,
         dept:'me',
         reg: true,
+        group: false,
     },
     {
         event_id:67,
@@ -179,21 +190,23 @@ const MecahnicalEventData = [
         prize: false,
         dept:'me',
         reg: false,
+        group: true,
     },
     {
         event_id:68,
-        name: 'Elf Riders',
+        name: 'Vagabond',
         description:'Game event based on puzzles and clues',
         event_type: 'Games',
-        fee: 50,
-        student1: 'Sourab Sugathan',
-        s1_phone: 9207488150,
-        student2: 'Abhiram Suresh',
-        s2_phone: 9539308740,
+        fee: 60,
+        student1: 'Ajnas AK',
+        s1_phone: 9562632808,
+        student2: 'Alan Kuriakose',
+        s2_phone: 8078838364,
         staff: 'Dilin Dinesh, Gokulnath',
         prize: true,
         dept:'me',
         reg: true,
+        group: true,
     },
     {
         event_id:69,
@@ -209,6 +222,7 @@ const MecahnicalEventData = [
         prize: false,
         dept:'me',
         reg: false,
+        group: true,
     },
     {
         event_id:70,
@@ -224,6 +238,7 @@ const MecahnicalEventData = [
         prize: false,
         dept:'me',
         reg: false,
+        group: true,
     },
     {
         event_id:71,
@@ -239,6 +254,7 @@ const MecahnicalEventData = [
         prize: true,
         dept:'me',
         reg: true,
+        group: false,
     },
     {
         event_id:72,
@@ -254,6 +270,7 @@ const MecahnicalEventData = [
         prize: false,
         dept:'me',
         reg: false,
+        group: true,
     },
     {
         event_id:73,
@@ -269,6 +286,7 @@ const MecahnicalEventData = [
         prize: false,
         dept:'me',
         reg: false,
+        group: true,
     },
 ];
 

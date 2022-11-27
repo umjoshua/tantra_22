@@ -13,6 +13,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: true,
     },
     {
         event_id: 75,
@@ -28,6 +29,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: true,
     },
     {
         event_id: 76,
@@ -43,6 +45,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: false,
     },
     {
         event_id: 77,
@@ -58,6 +61,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: false,
     },
     {
         event_id: 78,
@@ -73,6 +77,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: false,
     },
     {
         event_id: 79,
@@ -81,13 +86,14 @@ const EeeEventData = [
         event_type: 'Competition',
         fee: 'FREE',
         student1: 'Roma Ullas',
-        s1_phone: 9778229422,
+        s1_phone: 9076058015,
         student2: 'Sreelakshmi Rajeev ',
         s2_phone: 9072764526,
         staff: 'Tintu George',
         prize: true,
         dept: 'eee',
         reg : true,
+        group: true,
     },
     {
         event_id: 80,
@@ -103,6 +109,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: true,
     },
     {
         event_id: 81,
@@ -118,6 +125,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: false,
     },
     {
         event_id: 82,
@@ -133,6 +141,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: false,
     },
     {
         event_id: 83,
@@ -148,6 +157,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: true,
     },
     {
         event_id: 84,
@@ -163,6 +173,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: false,
     },
     {
         event_id: 85,
@@ -177,7 +188,9 @@ const EeeEventData = [
         staff: 'Jijo joseph',
         prize: true,
         dept: 'eee',
-        reg : true,
+        reg : false,
+        group: false,
+
     },
     {
         event_id: 86,
@@ -193,6 +206,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: false,
     },
     {
         event_id: 87,
@@ -208,6 +222,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: false,
     },
     {
         event_id: 88,
@@ -223,6 +238,7 @@ const EeeEventData = [
         prize: true,
         dept: 'eee',
         reg : true,
+        group: false,
     },
     {
         event_id: 89,
@@ -238,6 +254,7 @@ const EeeEventData = [
         prize: false,
         dept: 'eee',
         reg : false,
+        group: false,
     },
     {
         event_id: 90,
@@ -253,6 +270,7 @@ const EeeEventData = [
         prize: false,
         dept: 'eee',
         reg : false,
+        group: true,
     },
     {
         event_id: 91,
@@ -268,6 +286,7 @@ const EeeEventData = [
         prize: false,
         dept: 'eee',
         reg : false,
+        group: true,
     },
     {
         event_id: 92,
@@ -283,6 +302,7 @@ const EeeEventData = [
         prize: false,
         dept: 'eee',
         reg : false,
+        group: false,
     },
 ];
 
