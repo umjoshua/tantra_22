@@ -13,6 +13,7 @@ const CommonEventData = [
         prize: true,
         dept:'comm',
         reg: true,
+        group: false,
     }
 ];
 

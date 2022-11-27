@@ -16,7 +16,8 @@ const ViewDetails = ({ data }) => {
               <p>{data.description}</p>
               <div className='font-bold'>Prize :</div>
               <p>{data.prize ? 'Yes' : 'No'}</p>
-
+              <div className='font-bold'>Event type :</div>
+              <p>{data.group ? 'Group' : 'Individual'}</p>
               <div className='font-bold'>Student Coordinators :</div>
               <p>{data.student1} , {data.student2}</p>
               <div className='font-bold'>Contact</div>

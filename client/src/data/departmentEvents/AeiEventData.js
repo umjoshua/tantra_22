@@ -13,6 +13,7 @@ const AeiEventData = [
         prize: true,
         dept:'aei',
         reg: true,
+        group: true
     },
     {
         event_id:6,
@@ -28,6 +29,7 @@ const AeiEventData = [
         prize: false,
         dept:'aei',
         reg: false,
+        group: true
     },
     {
         event_id:7,
@@ -43,6 +45,7 @@ const AeiEventData = [
         prize: true,
         dept:'aei',
         reg: true,
+        group: true
     },
 
     {
@@ -59,6 +62,7 @@ const AeiEventData = [
         prize: true,
         dept:'aei',
         reg: true,
+        group: true
     },
     {
         event_id:9,
@@ -74,6 +78,7 @@ const AeiEventData = [
         prize: true,
         dept:'aei',
         reg: true,
+        group: true
     },
     {
         event_id:10,
@@ -89,6 +94,7 @@ const AeiEventData = [
         prize: true,
         dept:'aei',
         reg: true,
+        group: false
     },
     {
         event_id:11,
@@ -104,6 +110,7 @@ const AeiEventData = [
         prize: true,
         dept:'aei',
         reg: true,
+        group: false
     },
     {
         event_id:12,
@@ -119,6 +126,7 @@ const AeiEventData = [
         prize: true,
         dept:'aei',
         reg: true,
+        group: true
     },
     {
         event_id:13,
@@ -134,6 +142,7 @@ const AeiEventData = [
         prize: true,
         dept:'aei',
         reg: true,
+        group: true
     },
     {
         event_id:14,
@@ -149,6 +158,7 @@ const AeiEventData = [
         prize: true,
         dept:'aei',
         reg: true,
+        group: true
     }
 ];
 

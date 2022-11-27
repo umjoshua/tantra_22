@@ -13,6 +13,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: true,
+        group: false,
     },
     {
         event_id:41,
@@ -28,6 +29,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: false,
+        group: false,
     },
     {
         event_id:42,
@@ -43,6 +45,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: false,
+        group: true,
     },
     {
         event_id:43,
@@ -58,6 +61,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: false,
+        group: false,
     },
     {
         event_id:44,
@@ -73,6 +77,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: false,
+        group: false,
     },
     {
         event_id:45,
@@ -88,6 +93,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: false,
+        group: false,
     },
     {
         event_id:46,
@@ -103,6 +109,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: false,
+        group: false,
     },
     {
         event_id:47,
@@ -118,6 +125,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: false,
+        group: false,
     },
     {
         event_id:48,
@@ -133,6 +141,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: false,
+        group: false,
     },
     {
         event_id:49,
@@ -148,6 +157,7 @@ const EceEventData = [
         prize: true,
         dept:'ece',
         reg: true,
+        group: false,
     },
     {
         event_id:50,
@@ -163,6 +173,7 @@ const EceEventData = [
         prize: true,
         dept:'ece',
         reg: true,
+        group: false,
     },
     {
         event_id:51,
@@ -178,6 +189,7 @@ const EceEventData = [
         prize: true,
         dept:'ece',
         reg: false,
+        group: false,
     },
     {
         event_id:52,
@@ -193,6 +205,7 @@ const EceEventData = [
         prize: true,
         dept:'ece',
         reg: true,
+        group: false,
     },
     {
         event_id:53,
@@ -208,13 +221,14 @@ const EceEventData = [
         prize: true,
         dept:'ece',
         reg: true,
+        group: true,
     },
     {
         event_id:54,
-        name: 'VR experiencing and Gaming By PACELAB',
+        name: 'VR & Gaming By PACELAB',
         description: 'Gaming and Entertainment',
         event_type:'Competition' ,
-        fee:30,
+        fee:200,
         student1: 'Angitha N',
         s1_phone: 9995130907,
         student2: 'Niswarth A V',
@@ -223,6 +237,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: true,
+        group: false,
     },
     {
         event_id:55,
@@ -238,6 +253,7 @@ const EceEventData = [
         prize: false,
         dept:'ece',
         reg: true,
+        group: false,
     },
 ];
 

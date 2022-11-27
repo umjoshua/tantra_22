@@ -13,6 +13,7 @@ const AdsEventData = [
         prize: true,
         dept:'ads',
         reg: true,
+        group: false,
     },
     {
         event_id:2,
@@ -28,6 +29,7 @@ const AdsEventData = [
         prize: true,
         dept:'ads',
         reg: true,
+        group: true,
 
     },
     {
@@ -44,13 +46,30 @@ const AdsEventData = [
         prize: true,
         dept:'ads',
         reg: true,
+        group: true,
+    },
+    {
+        event_id:500,
+        name: 'Magnum',
+        description: 'Group wise event Games : Valorant in collaboration with cse(Team size will be five )',
+        event_type: 'Competition',
+        fee: 250,
+        student1: 'Vaishak P',
+        s1_phone: 7994665201,
+        student2: 'Snehal T Vinod',
+        s2_phone: 9188899344,
+        staff: '',
+        prize: true,
+        dept:'ads',
+        reg: true,
+        group: true,
     },
     {
         event_id:4,
         name: 'Recoil',
         description: 'Group wise event Games : Call of Duty, Valorant. (Team size will be five )',
         event_type: 'Competition',
-        fee: 250,
+        fee: 200,
         student1: 'Vaishak P',
         s1_phone: 7994665201,
         student2: 'Snehal T Vinod',
@@ -59,6 +78,7 @@ const AdsEventData = [
         prize: true,
         dept:'ads',
         reg: true,
+        group: true,
     },
 ];
 
