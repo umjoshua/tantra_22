@@ -6,25 +6,33 @@ export const loginUser = async (req, res) => {
     const { username, password } = req.body;
     try {
         let user = await UserDetails.findOne({ username });
-        console.log(user);
         if (!user) {
             return res.status(400).json({ msg: 'incorrect username' });
         }
         const isCorrect = await bcrypt.compare(password, user.password);
+
         if (!isCorrect) {
             return res.status(400).json({ msg: 'incorrect password' });
         }
-        jwt.sign(
-            { id: user.id },
+
+        const payload = {
+            id: user._id,
+            role: user.role,
+        };
+
+        const signOptions = {
+            expiresIn: "12h"
+        }
+
+        const token = jwt.sign(
+            payload,
             process.env.JWT_SECRET,
-            { expiresIn: '30 days' },
-            (err, token) => {
-                if (err) throw err;
-                res.json({ token });
-            }
+            signOptions
         );
+        res.json({token});
+        
     } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server error');
+        console.log(err);
+        // res.status(500).send('Server error');
     }
 }

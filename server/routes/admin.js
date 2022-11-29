@@ -1,11 +1,13 @@
 import express from 'express';
 import { loginUser } from '../controllers/login.js';
-// import { getResponses } from '../controllers/responseData.js';
-import { auth } from '../middleware/auth.js';
+import { getResponses, getCsResponses, getAdsResponses } from '../controllers/responseData.js';
+import { auth } from '../middleware/authentication.js';
 
 const router = express.Router();
 
 router.post('/', loginUser);
-// router.get('/responses', auth, getResponses);
+router.get('/api/responses', auth, getResponses);
+router.get('/api/csresponse', auth, getCsResponses);
+router.get('/api/adsresponse', auth, getAdsResponses);
 
 export default router;
