@@ -2,6 +2,7 @@ import UserDetails from '../Models/userDetails.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
+
 export const loginUser = async (req, res) => {
     const { username, password } = req.body;
     try {
@@ -21,7 +22,7 @@ export const loginUser = async (req, res) => {
         };
 
         const signOptions = {
-            expiresIn: "12h"
+            expiresIn: "23h",
         }
 
         const token = jwt.sign(
@@ -29,9 +30,12 @@ export const loginUser = async (req, res) => {
             process.env.JWT_SECRET,
             signOptions
         );
+
         res.json({token});
     } catch (err) {
         console.log(err);
-        // res.status(500).send('Server error');
+        res.status(500).send('Server error');
     }
+
+    
 }
