@@ -30,7 +30,6 @@ export const loginUser = async (req, res) => {
             signOptions
         );
         res.json({token});
-        
     } catch (err) {
         console.log(err);
         // res.status(500).send('Server error');
