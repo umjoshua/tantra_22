@@ -1,8 +1,37 @@
 import jwt from "jsonwebtoken";
-import mongoose from "mongoose";
-import UserDetails from '../Models/userDetails.js';
 
 export const auth = async (req, res, next) => {
+    const endpoint = req.url.substring(req.url.lastIndexOf('/') + 1);
+    let role = null;
+    switch (endpoint) {
+        case "responses":
+            role = "sadmin";
+            break;
+        case "csresponses":
+            role = "csadmin";
+            break;
+        case "adsresponses":
+            role = "adsadmin";
+            break;
+        case "eeeresponses":
+            role = "eeeadmin";
+            break;
+        case "eceresponses":
+            role = "eceadmin";
+            break;
+        case "aeiresponses":
+            role = "aeiadmin";
+            break;
+        case "ceresponses":
+            role = "ceadmin";
+            break;
+        case "ashresponses":
+            role = "ashadmin";
+            break;
+        case "commresponses":
+            role = "commadmin";
+            break;
+    }
 
     function parseJwt(token) {
         return JSON.parse(Buffer.from(token.split('.')[1], 'base64').toString());
@@ -14,20 +43,24 @@ export const auth = async (req, res, next) => {
     }
 
     try {
-        const userRole = parseJwt(token);
-        const user = await UserDetails.find({ role: userRole});
+        const userRole = parseJwt(token); //jwt role
 
         jwt.verify(token, process.env.JWT_SECRET, (error, decoded) => {
-            if (error || user.role != userRole) {
+            if (error) {
                 return res.status(401).json({ msg: 'Invalid token' });
-            } else {
+
+            }
+            else if (userRole.role != role) {
+                return res.status(401).json({ msg: 'Nice try! Better luck next time.' });
+            }
+            else {
                 req.user = decoded.user;
                 next();
             }
         });
     } catch (err) {
-        console.log(err);
-        // console.error('something wrong with auth middleware');
-        res.status(500).json({ msg: 'Server Error' });
+        res.status(401).json({ msg: 'Nice try! Better luck next time.' });
     }
 }
+
+
