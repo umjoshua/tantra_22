@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/', loginUser);
 router.get('/api/responses', auth, getResponses);
-router.get('/api/csresponse', auth, getCsResponses);
-router.get('/api/adsresponse', auth, getAdsResponses);
+router.get('/api/csresponses', auth, getCsResponses);
+router.get('/api/adsresponses', auth, getAdsResponses);
 
 export default router;
