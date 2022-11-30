@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const AdminLogin = () => {
 	const navigate = useNavigate();
 	const [data, setData] = useState({ username: "", password: "" });
-	const [error, setError] = useState("");
+	const [warning, setWarning] = useState(false);
 
 	const handleChange = ({ currentTarget: input }) => {
 		setData({ ...data, [input.name]: input.value });
@@ -16,11 +16,9 @@ const AdminLogin = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-            console.log(data.username)
 			const url = "http://localhost:5000/admin";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.token);
-			console.log(res);
 			navigate('/admin');
 			window.location.reload();
 		} catch (error) {
@@ -29,7 +27,7 @@ const AdminLogin = () => {
 				error.response.status >= 400 &&
 				error.response.status <= 500
 			) {
-				setError(error.response.data.message);
+				setWarning(true);
 			}
 		}
 	};
@@ -39,7 +37,7 @@ const AdminLogin = () => {
 			<div className={styles.login_form_container}>
 				<div className={styles.left}>
 					<form className={styles.form_container} onSubmit={handleSubmit}>
-						<h1>Login to Your Account</h1>
+						<h1>Login</h1>
 						<input
 							type="text"
 							placeholder="username"
@@ -58,7 +56,7 @@ const AdminLogin = () => {
 							required
 							className={styles.input}
 						/>
-						{error && <div className={styles.error_msg}>{error}</div>}
+						{warning && <div className={styles.error_msg}>Incorrect Username/Password</div>}
 						<button type="submit" className={styles.green_btn}>
 							Sign In
 						</button>
