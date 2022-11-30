@@ -6,7 +6,6 @@ import Axios from 'axios';
 function AdminHome() {
     return (
         <div className='w-[100%] h-[100%]'>
-            <AdminNav />
             <AdminView />
         </div>
     )

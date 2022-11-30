@@ -1,8 +1,84 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import jwt_decode from "jwt-decode";
+import AdminNav from '../adminNav/AdminNav';
 
 function AdminView() {
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        window.location.reload();
+    };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await Axios.get(url, {
+                headers: {
+                    'x-auth-token': token
+                }
+            }).catch((error) => {
+                if (error.response) {
+                    console.log(error.response.status);
+                    setStatusAuth(false);
+                }
+            })
+            const grouped = groupBy(response.data, 'event_id');
+            setRegData(grouped);
+            setindexList(Object.keys(grouped));
+        };
+        fetchData();
+    }, []);
+
+    const [regData, setRegData] = useState(null);
+    const [indexList, setindexList] = useState([]);
+    const [statusAuth, setStatusAuth] = useState(true);
+
+    const token = localStorage.getItem("token");
+    let userRole = ""
+    try {
+        userRole = jwt_decode(token).role;
+    }
+    catch (error) {
+        console.log(error);
+    }
+
+
+
+    let baseUrl = "http://localhost:5000/admin/api/"
+    let url = baseUrl + "responses";
+    console.log(url);
+
+
+    switch (userRole) {
+        case "sadmin":
+            url = baseUrl + "responses";
+            break;
+        case "csadmin":
+            url = baseUrl + "csresponses";
+            break;
+        case "ceadmin":
+            url = baseUrl + "ceresponses";
+            break;
+        case "adsadmin":
+            url = baseUrl + "adsresponses";
+            break;
+        case "aeiadmin":
+            url = baseUrl + "aeiresponses";
+            break;
+        case "eceadmin":
+            url = baseUrl + "eceresponses";
+            break;
+        case "eeeadmin":
+            url = baseUrl + "eeeresponses";
+            break;
+        case "ashadmin":
+            url = baseUrl + "ashresponses";
+            break;
+        case "commadmin":
+            url = baseUrl + "commresponses"
+            break;
+    }
+
 
     const Table = ({ data, ind }) => {
         console.log(data);
@@ -56,59 +132,6 @@ function AdminView() {
             </tr>
         )
     }
-    const [regData, setRegData] = useState(null);
-    const [indexList, setindexList] = useState([]);
-
-    const token = localStorage.getItem("token");
-    let userRole = jwt_decode(token).role;
-
-    let baseUrl = "http://localhost:5000/admin/api/"
-    let url = baseUrl + "responses";
-    console.log(url);
-
-    switch (userRole) {
-        case "sadmin":
-            url = baseUrl + "responses";
-            break;
-        case "csadmin":
-            url = baseUrl + "csresponses";
-            break;
-        case "ceadmin":
-            url = baseUrl + "ceresponses";
-            break;
-        case "adsadmin":
-            url = baseUrl + "adsresponses";
-            break;
-        case "aeiadmin":
-            url = baseUrl + "aeiresponses";
-            break;
-        case "eceadmin":
-            url = baseUrl + "eceresponses";
-            break;
-        case "eeeadmin":
-            url = baseUrl + "eeeresponses";
-            break;
-        case "ashadmin":
-            url = baseUrl + "ashresponses";
-            break;
-        case "commadmin":
-            url = baseUrl + "commresponses"
-            break;
-    }
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await Axios.get(url, {
-                headers: {
-                    'x-auth-token': token
-                }
-            });
-            const grouped = groupBy(response.data, 'event_id');
-            setRegData(grouped);
-            setindexList(Object.keys(grouped));
-        };
-        fetchData();
-    }, []);
 
     function groupBy(objectArray, property) {
         return objectArray.reduce((acc, obj) => {
@@ -123,6 +146,11 @@ function AdminView() {
 
     return (
         <div>
+            {!statusAuth ?
+                <div className='bg-white w-screen h-screen items-center flex justify-center'>
+                    UnAuthorized Access!! Click
+                    <button className='px-5 py-1 bg-teal-400 rounded mx-2' onClick={handleLogout}>Login</button> to Login
+                </div> : <AdminNav />}
             {regData != null && indexList.map((item, index) => <Table data={regData[item]} ind={item} key={index} />)}
         </div>
     )
