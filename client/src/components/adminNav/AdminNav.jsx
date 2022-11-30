@@ -14,8 +14,8 @@ function AdminNav() {
         <span>Tantra 22 Admin Dashboard</span>
       </div>
       <div className='flex flex-row'>
-        <button className='bg-teal-500 p-2 rounded-xl font-bold mx-5' onClick={handleReload}>RELOAD</button>
-        <button className='bg-red-500 p-2 rounded-xl font-bold mx-5 text-white' onClick={handleLogout}>LOGOUT</button>
+        <button className='bg-teal-500 p-2 rounded-xl font-bold mx-5' onClick={handleReload}>Refresh</button>
+        <button className='bg-red-500 p-2 rounded-xl font-bold mx-5 text-white' onClick={handleLogout}>Logout</button>
       </div>
     </div>
   )
