@@ -1,0 +1,16 @@
+table{
+    border-width: 2px;
+    border-color: gray;
+}
+thead,tbody,th,td{
+    padding-left: 10px;
+    border-color: gray;
+    border-width: 1px;
+}
+
+@media screen and (max-width: 640px) {
+    .detail_tab,table{
+        width: 100%;
+        height: fit-content;
+    }
+}

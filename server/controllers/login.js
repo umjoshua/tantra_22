@@ -2,7 +2,6 @@ import UserDetails from '../Models/userDetails.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-
 export const loginUser = async (req, res) => {
     const { username, password } = req.body;
     try {
@@ -35,7 +34,5 @@ export const loginUser = async (req, res) => {
     } catch (err) {
         console.log(err);
         res.status(500).send('Server error');
-    }
-
-    
+    }   
 }
