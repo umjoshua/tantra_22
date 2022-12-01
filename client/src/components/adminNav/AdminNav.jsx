@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AdminNav() {
+function AdminNav({ branch }) {
   const handleLogout = () => {
     localStorage.removeItem("token");
     window.location.reload();
@@ -11,7 +11,9 @@ function AdminNav() {
   return (
     <div className='bg-[#FFFFFF] w-[100%] h-[70px] flex items-center justify-between p-5 sticky top-0'>
       <div className='w-[85%] h-[100%] flex items-center pl-[3%]'>
-        <span>Tantra 22 Admin Dashboard</span>
+        <span className='font-extrabold md:text-2xl'>Tantra 22 -
+          <span className='text-red-500'> {branch}</span>
+        </span>
       </div>
       <div className='flex flex-row'>
         <button className='bg-teal-500 p-2 rounded-xl font-bold mx-5' onClick={handleReload}>Refresh</button>
