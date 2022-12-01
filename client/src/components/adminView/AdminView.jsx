@@ -94,17 +94,20 @@ function AdminView() {
         console.log(data);
         return (
             <div className="flex flex-col">
-                <div className='mt-5 bg-white mx-8 p-5 justify-between flex flex-row'>
+                <div className='mt-5 bg-white mx-8 px-5 pt-5 justify-between flex flex-row'>
                     <p className='font-extrabold '>{data[0].event_name}</p>
                     {/* <button className='bg-gray-400 px-2 rounded cursor-pointer' disabled>Export Data</button> */}
+                </div>
+                <div className='bg-white mx-8 pl-5'>
+                <p className='font-extrabold '>Total Registrations: {data.length}</p>
                 </div>
                 <div className="overflow-x-auto">
                     <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                         <div className="overflow-hidden">
                             <table className="min-w-full">
                                 <TableHeader />
-                                <tbody>
-                                    {regData[ind].map((item, index) => <TableData props={item} key={index} />)}
+                                <tbody className='items-center justify-evenly'>
+                                    {regData[ind].map((item, index) => <TableData props={item} key={index} ind={index}/>)}
                                 </tbody>
                             </table>
                         </div>
@@ -116,9 +119,10 @@ function AdminView() {
 
     const TableHeader = () => {
         return (
-            <thead className="border-b bg-white">
+            <thead className="border-b bg-white text-center">
                 <tr>
-                    <th className='py-5 '>Name</th>
+                    <th>Sl.No</th>
+                    <th className='py-5'>Name</th>
                     <th>College</th>
                     <th>Branch</th>
                     <th>Semester</th>
@@ -130,10 +134,11 @@ function AdminView() {
         )
     }
 
-    const TableData = ({ props }) => {
+    const TableData = ({ props, ind }) => {
         return (
-            <tr className="bg-white border-b">
-                <td className="px-6 py-4 whitespace-nowrap ">{props.name}</td>
+            <tr className="bg-white border-b text-center">
+                <td >{ind+1}</td>
+                <td className="py-4 whitespace-nowrap ">{props.name}</td>
                 <td>{props.college}</td>
                 <td>{props.branch}</td>
                 <td>{props.semester}</td>
