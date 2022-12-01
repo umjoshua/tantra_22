@@ -47,35 +47,45 @@ function AdminView() {
     let baseUrl = "http://localhost:5000/admin/api/"
     let url = baseUrl + "responses";
     console.log(url);
+    let branch = "";
 
 
     switch (userRole) {
         case "sadmin":
             url = baseUrl + "responses";
+            branch = "Super Admin"
             break;
         case "csadmin":
             url = baseUrl + "csresponses";
+            branch = "CSE"
             break;
         case "ceadmin":
             url = baseUrl + "ceresponses";
+            branch = "CE"
             break;
         case "adsadmin":
             url = baseUrl + "adsresponses";
+            branch = "ADS"
             break;
         case "aeiadmin":
             url = baseUrl + "aeiresponses";
+            branch = "AEI"
             break;
         case "eceadmin":
             url = baseUrl + "eceresponses";
+            branch = "ECE"
             break;
         case "eeeadmin":
             url = baseUrl + "eeeresponses";
+            branch = "EEE"
             break;
         case "ashadmin":
             url = baseUrl + "ashresponses";
+            branch = "ASH"
             break;
         case "commadmin":
             url = baseUrl + "commresponses"
+            branch = "Common Events"
             break;
     }
 
@@ -84,8 +94,9 @@ function AdminView() {
         console.log(data);
         return (
             <div className="flex flex-col">
-                <div className='mt-5 bg-white mx-8 p-5'>
-                    <p className='font-extrabold'>{data[0].event_name}</p>
+                <div className='mt-5 bg-white mx-8 p-5 justify-between flex flex-row'>
+                    <p className='font-extrabold '>{data[0].event_name}</p>
+                    {/* <button className='bg-gray-400 px-2 rounded cursor-pointer' disabled>Export Data</button> */}
                 </div>
                 <div className="overflow-x-auto">
                     <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -106,8 +117,8 @@ function AdminView() {
     const TableHeader = () => {
         return (
             <thead className="border-b bg-white">
-                <tr >
-                    <th className='p-5 '>Name</th>
+                <tr>
+                    <th className='py-5 '>Name</th>
                     <th>College</th>
                     <th>Branch</th>
                     <th>Semester</th>
@@ -147,10 +158,14 @@ function AdminView() {
     return (
         <div>
             {!statusAuth ?
-                <div className='bg-white w-screen h-screen items-center flex justify-center'>
-                    UnAuthorized Access!! Click
-                    <button className='px-5 py-1 bg-teal-400 rounded mx-2' onClick={handleLogout}>Login</button> to Login
-                </div> : <AdminNav />}
+                <div className='bg-white w-screen h-screen items-center flex justify-center flex-col'>
+                    <div className='text-red-800 font-extrabold text-2xl'>UnAuthorized Access!!</div>
+                    <div>
+                        Click
+                        <button className='px-5 py-1 bg-teal-400 rounded mx-2' onClick={handleLogout}>Login</button>
+                        to Login
+                    </div>
+                </div> : <AdminNav branch={branch} />}
             {regData != null && indexList.map((item, index) => <Table data={regData[item]} ind={item} key={index} />)}
         </div>
     )
