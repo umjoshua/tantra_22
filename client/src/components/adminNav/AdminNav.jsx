@@ -1,5 +1,5 @@
 import React from 'react';
-
+//Comment by albin
 function AdminNav({ branch }) {
   const handleLogout = () => {
     localStorage.removeItem("token");
